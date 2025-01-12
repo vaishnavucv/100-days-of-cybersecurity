@@ -31,7 +31,11 @@ This challenge is designed to:
 Need help or support during the challenge? Connect with the community and stay updated via the following platforms:
 
 ### Join the Discussion
-- **Discord (Main Source of Support)**: [discord.gg/bFkdWjgCdF](https://discord.gg/bFkdWjgCdF) 🎮
+- **Discord (Main Source of Support)**: 👉[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/bFkdWjgCdF)
+[![Discord](https://img.shields.io/discord/1171385981501456394)](https://discord.gg/bFkdWjgCdF)
+
+
+
 
 ### Stay Updated
 - **Instagram**:
