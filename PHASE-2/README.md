@@ -23,7 +23,7 @@
 |           | Day 30  | Cross-Site Scripting (XSS)                  | Learn how to identify and exploit XSS vulnerabilities. | [Resources]()    |
 | Week-4    | Day 31  | Directory Traversal Attacks                 | Exploit directory traversal vulnerabilities.         | [Resources]()      |
 |           | Day 32  | Exploiting CSRF (Cross-Site Request Forgery)| Learn about CSRF attacks and prevention techniques.  | [Resources]()      |
-|           | Day 33  | Developing a Web Scanner                    | Build a Python tool for detecting common web vulnerabilities. | [Resources]() |
+|           | Day 33  | Developing a Web Scanner                    | Build  Python tools for detecting common web vulnerabilities. | [Resources]() |
 |           | Day 34  | Review and Practice                         | Test and refine your web exploitation skills.        | [Resources]()      |
 
 ---
