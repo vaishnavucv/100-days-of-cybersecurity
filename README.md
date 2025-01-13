@@ -1,4 +1,4 @@
-# 100 Days of Cybersecurity 🚀
+# 100 Days of Cybersecurity 🚀.
 
 Welcome to the **100 Days of Cybersecurity** challenge—a comprehensive roadmap divided into days, weeks, and 4 phases to guide complete beginners or aspiring cybersecurity professionals on their journey to self-learn and explore cybersecurity and ethical hacking.
 
