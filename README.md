@@ -44,6 +44,8 @@ Need help or support during the challenge? Connect with the community and stay u
   - [@realsector21](https://www.instagram.com/realsector21/) 📸
 - **LinkedIn**:
   - [Vaishnavu C V](https://www.linkedin.com/in/vaishnavucv/) 💼
+-  **Discord-Post**
+  - [Cyberrange](https://discord.com/channels/1171385981501456394/1328365087559254090/1328365087559254090)
 
 ## 🌍 Spread the Word!
 
