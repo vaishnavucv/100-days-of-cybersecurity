@@ -33,7 +33,7 @@ The **INTERNET** is made up of **MANY SMALL NETWORKS** joined together.
 To communicate and maintain order, devices must be **BOTH IDENTIFYING AND IDENTIFIABLE** on a network. Devices on a network are very similar to humans in the fact that we have two ways of being identified **Our Name** **Our Fingerprints**.
 \
 We can change our name through deed poll, but we can't, change our fingerprints. Every human has an individual set of fingerprints which means that even if they change their name, there is still an identity behind it. Devices have the same thing: two means of identification, with one being permeable. They are **IP Address** and **Media Access Control (MAC) Address**
-\
+
 ## 3. a. IP ADDRESSES
 ---
 IP address (or **I**nternet **P**rotocol) address can be used as a way of identifying a host on a network for a period of time, where that IP address can then be associated with another device without the IP address changing.\
