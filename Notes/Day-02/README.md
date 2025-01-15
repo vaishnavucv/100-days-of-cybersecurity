@@ -19,10 +19,8 @@ A **NETWORK** consists of 2 or more computers linked to share resources. These d
 > [!NOTE]
 > **COMPUTER NETWORK** 
 > SET OF COMPUTERS THAT ARE CONNECTED TOGETHER SO AS TO SHARE INFORMATION
-> 
-\
 
-![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115222650.png)
+\![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115222650.png)
 **Source : Britannica**\
 \
 The **INTERNET** is made up of **MANY SMALL NETWORKS** joined together. 
