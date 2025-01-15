@@ -36,7 +36,7 @@ We can change our name through deed poll, but we can't, change our fingerprints.
 \
 ## 3. a. IP ADDRESSES
 ---
-IP address (or **I**nternet **P**rotocol) address can be used as a way of identifying a host on a network for a period of time, where that IP address can then be associated with another device without the IP address changing.
+IP address (or **I**nternet **P**rotocol) address can be used as a way of identifying a host on a network for a period of time, where that IP address can then be associated with another device without the IP address changing.\
 \
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115224629.png)
 **Source : HOSTWINDS**\
@@ -45,8 +45,8 @@ An **IP ADDRESS** is a set of numbers that are divided into four octets. The val
 \
 IP Addresses follow a set of standards known as protocols. These protocols are the backbone of networking and force many devices to communicate in the same language. \
 \
-A device can be on both a private and public network. Depending on where they are will determine what type of IP address they have:\ 
-\
+A device can be on both a private and public network. Depending on where they are will determine what type of IP address they have:
+
 - **GLOBAL or PUBLIC or EXTERNAL IP ADDRESS** : Identify the device on the Internet. This group can also be called 'WAN addresses' .
 - **PRIVATE or LOCAL or INTERNAL IP ADDRESS** : Identify a device amongst other devices. These are used in the local network (LAN). They are not routed on the Internet and no traffic can be sent to them from the Internet, they only supposed to work within the local network
 \
