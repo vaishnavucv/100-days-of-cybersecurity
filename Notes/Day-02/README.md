@@ -8,8 +8,8 @@ Images used in this file are not owned or made by me and are copied from interne
 1. **INTRODUCTION**
 2. What is **INTERNET**
 3. IDENTIFYING DEVICES ON A NETWORK
-	a. **IP ADDRESS**
-	b. **MAC ADDRESS**
+- a. **IP ADDRESS**
+- b. **MAC ADDRESS**
 	
 
 # 1. INTRODUCTION
