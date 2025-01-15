@@ -27,7 +27,7 @@ A **NETWORK** consists of 2 or more computers linked to share resources. These d
 The **INTERNET** is made up of **MANY SMALL NETWORKS** joined together. 
 - These small networks are called **PRIVATE NETWORKS**.
 - The networks connecting these small networks are called **PUBLIC NETWORKS**
-\
+
 # 3. IDENTIFYING DEVICES ON A NETWORK
 ***
 To communicate and maintain order, devices must be **BOTH IDENTIFYING AND IDENTIFIABLE** on a network. Devices on a network are very similar to humans in the fact that we have two ways of being identified **Our Name** **Our Fingerprints**.
