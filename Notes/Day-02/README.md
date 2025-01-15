@@ -16,6 +16,7 @@ Images used in this file are not owned or made by me and are copied from interne
 ---
 A **NETWORK** consists of 2 or more computers linked to share resources. These devices include everything from your laptop and phone to security cameras, traffic lights, and even farming.   They are the basis of communication in IT. Networks are integrated into our everyday life. Because networks are so embedded in modern-day, networking is an essential concept in Cyber Security. 
 
+
 > [!NOTE]
 > **COMPUTER NETWORK** 
 > SET OF COMPUTERS THAT ARE CONNECTED TOGETHER SO AS TO SHARE INFORMATION
@@ -42,15 +43,18 @@ However, it wasn't until 1989 when the **INTERNET** as we know it was invented b
 
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115222650.png)**Source : Britannica**
 
+
 The **INTERNET** is made up of **MANY SMALL NETWORKS** joined together. 
 - These small networks are called **PRIVATE NETWORKS**.
 - The networks connecting these small networks are called **PUBLIC NETWORKS**
+
 
 # 3. IDENTIFYING DEVICES ON A NETWORK
 ***
 To communicate and maintain order, devices must be **BOTH IDENTIFYING AND IDENTIFIABLE** on a network. Devices on a network are very similar to humans in the fact that we have two ways of being identified **Our Name** **Our Fingerprints**.
 
 We can change our name through deed poll, but we can't, change our fingerprints. Every human has an individual set of fingerprints which means that even if they change their name, there is still an identity behind it. Devices have the same thing: two means of identification, with one being permeable. They are **IP Address** and **Media Access Control (MAC) Address**
+
 
 ## 3. a. IP ADDRESSES
 ---
