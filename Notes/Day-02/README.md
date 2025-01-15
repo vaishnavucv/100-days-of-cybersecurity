@@ -23,7 +23,7 @@ A **NETWORK** consists of 2 or more computers linked to share resources. These d
 > SET OF COMPUTERS THAT ARE CONNECTED TOGETHER SO AS TO SHARE INFORMATION
 
 
-![Images]("https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115221827.png")
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115221827.png)
 
 
 **Source : Random pages on Internet**
