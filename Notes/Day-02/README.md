@@ -66,7 +66,7 @@ As more and more devices become connected, it is becoming increasingly harder to
 \
 We have only discussed one version of the Internet Protocol addressing scheme known as IPv4, which uses a numbering system of 2^32 IP addresses (4.29 billion), still there will be a shortage!\
 \
-IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackle this issue. It supports up to 2^128 of IP addresses (340 trillion-plus), resolving the issues faced with IPv4 and is more efficient due to new methodologies.\
+IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackle this issue. It supports up to 2^128 of IP addresses (340 trillion-plus), resolving the issues faced with IPv4 and is more efficient due to new methodologies.
 
 ## IPv4
 ---
@@ -85,7 +85,7 @@ IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackl
 
 ## Check your local IP address
 ---
-If you are using Linux or MacOS you can open your terminal and type \
+If you are using Linux or MacOS you can open your terminal and type 
 ```bash 
 ifconfig
 ```
@@ -97,11 +97,11 @@ ipconfig /all
 
 >[!NOTE]
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235710.png)
-\
+
 **Source : Internet**
 
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235335.png)
-\
+
 ### ``inet``  
 ---
 ```inet``` (Internet protocol family) show the local IP address
