@@ -1,12 +1,10 @@
 >[!WARNING]
 Images used in this file are not owned or made by me and are copied from internet. The Sources of the image have been provided below. The document is completely for educational and illustrational purposes only.
  
- <h1 style="color:cadetblue">OBJECTIVES</h1>
+# OBJECTIVES
 - Learn core concepts of how computers communicate with each other
-- D
-- E
 
-<h1 style="color:cadetblue">SYNOPSIS</h1>
+# SYNOPSIS
 1. **INTRODUCTION**
 2. What is **INTERNET**
 3. IDENTIFYING DEVICES ON A NETWORK
