@@ -39,7 +39,7 @@ We can change our name through deed poll, but we can't, change our fingerprints.
 IP address (or **I**nternet **P**rotocol) address can be used as a way of identifying a host on a network for a period of time, where that IP address can then be associated with another device without the IP address changing.
 \
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115224629.png)
-**Source : HOSTWINDS**
+**Source : HOSTWINDS**\
 \
 An **IP ADDRESS** is a set of numbers that are divided into four octets. The value of each octet will summarise to be the IP address of the device on the network. This number is calculated through a technique known as **IP ADDRESSING & SUBNETTING**. IP addresses can change from device to device but cannot be active simultaneously more than once within the same network. 
 \
@@ -51,13 +51,13 @@ A device can be on both a private and public network. Depending on where they ar
 - **PRIVATE or LOCAL or INTERNAL IP ADDRESS** : Identify a device amongst other devices. These are used in the local network (LAN). They are not routed on the Internet and no traffic can be sent to them from the Internet, they only supposed to work within the local network
 \
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115225243.png)
-**SOURCE : GEOTARGETLY**
+**SOURCE : GEOTARGETLY**\
 \
 > [!Note]
 > An **Internet Protocol Address (IP ADDRESS)** is a unique address that identifies a device on the internet or a local network. IP stands for "Internet Protocol," which is the set of rules governing the format of data sent via the internet or local network
 \
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115230725.png)
-**Source : Tryhackme**, not my real IP or MAC Address!
+**Source : Tryhackme**, not my real IP or MAC Address!\
 \
 These two devices will be able to use their private IP addresses to communicate with each other. However, any data sent to the Internet from either of these devices will be identified by the same public IP address. Public IP addresses are given by your **I**nternet **S**ervice **P**rovider (or **ISP**) at a monthly fee (your bill!).
 \
@@ -70,17 +70,17 @@ IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackl
 ## IPv4
 ---
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115231813.png)
-**Source : Tryhackme**, not my real IP or MAC Address!
+**Source : Tryhackme**, not my real IP or MAC Address!\
 \
 ## IPv6
 ----
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115232224.png)
-**Source : Tryhackme**, not my real IP Address!
+**Source : Tryhackme**, not my real IP Address!\
 \
 ## IPv4 vs IPv6
 ---
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115232533.png)
-**Source : AVAST**
+**Source : AVAST**\
 \
 ## Check your local IP address
 ---
@@ -96,7 +96,7 @@ ipconfig /all
 \
 >[!ifconfig]
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235710.png)
->**Source : Internet**
+>**Source : Internet**\
 \
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235335.png)
 ### ``inet``  
