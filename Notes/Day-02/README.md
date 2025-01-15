@@ -89,17 +89,16 @@ If you are using Linux or MacOS you can open your terminal and type \
 ```bash 
 ifconfig
 ```
-\
+
 For Windows machine you can open up the cmd prompt or powershell, then type 
 ```Powershell
 ipconfig /all
 ```
 
 >[!NOTE]
->ifconfig
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235710.png)
 >**Source : Internet**\
-\
+
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235335.png)
 ### ``inet``  
 ---
