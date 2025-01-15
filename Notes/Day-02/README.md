@@ -23,7 +23,7 @@ A **NETWORK** consists of 2 or more computers linked to share resources. These d
 > SET OF COMPUTERS THAT ARE CONNECTED TOGETHER SO AS TO SHARE INFORMATION
 
 
-![Images]("Images/Pasted image 20250115221827.png")
+![Images]("/Notes/Day-02/Images/Pasted image 20250115221827.png")
 
 
 **Source : Random pages on Internet**
