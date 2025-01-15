@@ -131,7 +131,7 @@ IPv4 = 32 bits range(4 octets of 8 bits from 0-255 each(4))
 11000000.10101000.00000001.00110110        [IPv4 BINARY]
    192  .   168  .   1    .   54           [IPv4 DECIMAL]
 ```
-\
+
 ```Calculation
   1   1   1   1   1   1   1   1
   |   |   |   |   |   |   |   |
@@ -145,10 +145,10 @@ To calculate the first octet (192.), from binary format to decimal:
  |   |   |   |   |   |   |   |
 128+ 64+ 0+  0+  0+  0+  0+  0 = 192   final value (firt octet IPv4 in decimal)
 ```
-\
+
 - Take the IP: `192.168.64.3`
 - The first octet `192` in 8-bit binary is `11000000`.
 - Only the `8th` and `7th` bit is on and the rest of them (`6th to 1st bit`) is off, meaning the decimal value is the final sum of these values: `128 + 64 = 192`
-\
+
 ## 3. b. MAC ADDRESSES
 ---
