@@ -2,8 +2,8 @@
 Images used in this file are not owned or made by me and are copied from internet. The Sources of the image have been provided below. The document is completely for educational and illustrational purposes only.
 &nbsp;
 # OBJECTIVES
-- Learn core concepts of how computers communicate with each other
-&nbsp;
+- Learn core concepts of how computers communicate with each other\
+
 # SYNOPSIS
 1. **INTRODUCTION**
 2. What is **INTERNET**
