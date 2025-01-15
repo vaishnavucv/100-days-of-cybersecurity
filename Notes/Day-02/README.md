@@ -95,7 +95,8 @@ For Windows machine you can open up the cmd prompt or powershell, then type
 ipconfig /all
 ```
 
->[!ifconfig]
+>[!NOTE]
+>ifconfig
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235710.png)
 >**Source : Internet**\
 \
