@@ -10,7 +10,7 @@ Images used in this file are not owned or made by me and are copied from interne
 3. IDENTIFYING DEVICES ON A NETWORK
 - a. **IP ADDRESS**
 - b. **MAC ADDRESS**
-\
+
 
 # 1. INTRODUCTION
 ---
@@ -22,7 +22,7 @@ A **NETWORK** consists of 2 or more computers linked to share resources. These d
 \
 
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115222650.png)
-**Source : Britannica**
+**Source : Britannica**\
 \
 The **INTERNET** is made up of **MANY SMALL NETWORKS** joined together. 
 - These small networks are called **PRIVATE NETWORKS**.
