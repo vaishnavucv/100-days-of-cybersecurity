@@ -42,7 +42,7 @@ However, it wasn't until 1989 when the **INTERNET** as we know it was invented b
 > **INTERNET** aka **NET** is worldwide system of interconnected Computer Networks and Electronic Devices that communicate with each other using an established set of **PROTOCOLS**.
 
 
-![Images]("https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted image 20250115222650.png")**Source : Britannica**
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115222650.png)**Source : Britannica**
 
 The **INTERNET** is made up of **MANY SMALL NETWORKS** joined together. 
 - These small networks are called **PRIVATE NETWORKS**.
@@ -58,7 +58,7 @@ We can change our name through deed poll, but we can't, change our fingerprints.
 ---
 IP address (or **I**nternet **P**rotocol) address can be used as a way of identifying a host on a network for a period of time, where that IP address can then be associated with another device without the IP address changing.
 
-![Images]("https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted image 20250115224629.png]]
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115224629.png)
 **Source : HOSTWINDS**
 
 
@@ -72,14 +72,14 @@ A device can be on both a private and public network. Depending on where they ar
 - **PRIVATE or LOCAL or INTERNAL IP ADDRESS** : Identify a device amongst other devices. These are used in the local network (LAN). They are not routed on the Internet and no traffic can be sent to them from the Internet, they only supposed to work within the local network
 
 
-![Images]("https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted image 20250115225243.png]]
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115225243.png)
 **SOURCE : GEOTARGETLY**
 
 > [!Note]
 > An **Internet Protocol Address (IP ADDRESS)** is a unique address that identifies a device on the internet or a local network. IP stands for "Internet Protocol," which is the set of rules governing the format of data sent via the internet or local network
 
 
-![Images]("https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted image 20250115230725.png]]
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115230725.png)
 **Source : Tryhackme**, not my real IP or MAC Address!
 
 These two devices will be able to use their private IP addresses to communicate with each other. However, any data sent to the Internet from either of these devices will be identified by the same public IP address. Public IP addresses are given by your **I**nternet **S**ervice **P**rovider (or **ISP**) at a monthly fee (your bill!).
@@ -92,17 +92,17 @@ IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackl
 
 ## IPv4
 ---
-![Images]("https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted image 20250115231813.png]]
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115231813.png)
 **Source : Tryhackme**, not my real IP or MAC Address!
 
 ## IPv6
 ----
-![Images]("https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted image 20250115232224.png]]
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115232224.png)
 **Source : Tryhackme**, not my real IP Address!
 
 ## IPv4 vs IPv6
 ---
-![Images]("https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted image 20250115232533.png]]
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115232533.png)
 **Source : AVAST**
 
 ## Check your local IP address
@@ -118,11 +118,11 @@ ipconfig /all
 ```
 
 >[!ifconfig]
-![Images]("https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted image 20250115235710.png]]
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235710.png)
 >**Source : Internet**
 
 
-![Images]("https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted image 20250115235335.png]]
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235335.png)
 ### ``inet``  
 ---
 ```inet``` (Internet protocol family) show the local IP address
