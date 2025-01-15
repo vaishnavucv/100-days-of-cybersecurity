@@ -71,12 +71,12 @@ IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackl
 ## IPv4
 ---
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115231813.png)\
-**Source : Tryhackme**, not my real IP or MAC Address!\
+**Source : Tryhackme**, not my real IP or MAC Address!
 
 ## IPv6
 ----
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115232224.png)\
-**Source : Tryhackme**, not my real IP Address!\
+**Source : Tryhackme**, not my real IP Address!
 
 ## IPv4 vs IPv6
 ---
@@ -101,6 +101,7 @@ ipconfig /all
 **Source : Internet**
 
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235335.png)
+\
 ### ``inet``  
 ---
 ```inet``` (Internet protocol family) show the local IP address
