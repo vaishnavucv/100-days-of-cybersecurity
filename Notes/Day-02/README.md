@@ -41,11 +41,11 @@ IP address (or **I**nternet **P**rotocol) address can be used as a way of identi
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115224629.png)
 **Source : HOSTWINDS**\
 \
-An **IP ADDRESS** is a set of numbers that are divided into four octets. The value of each octet will summarise to be the IP address of the device on the network. This number is calculated through a technique known as **IP ADDRESSING & SUBNETTING**. IP addresses can change from device to device but cannot be active simultaneously more than once within the same network. 
+An **IP ADDRESS** is a set of numbers that are divided into four octets. The value of each octet will summarise to be the IP address of the device on the network. This number is calculated through a technique known as **IP ADDRESSING & SUBNETTING**. IP addresses can change from device to device but cannot be active simultaneously more than once within the same network. \
 \
-IP Addresses follow a set of standards known as protocols. These protocols are the backbone of networking and force many devices to communicate in the same language. 
+IP Addresses follow a set of standards known as protocols. These protocols are the backbone of networking and force many devices to communicate in the same language. \
 \
-A device can be on both a private and public network. Depending on where they are will determine what type of IP address they have: 
+A device can be on both a private and public network. Depending on where they are will determine what type of IP address they have:\ 
 \
 - **GLOBAL or PUBLIC or EXTERNAL IP ADDRESS** : Identify the device on the Internet. This group can also be called 'WAN addresses' .
 - **PRIVATE or LOCAL or INTERNAL IP ADDRESS** : Identify a device amongst other devices. These are used in the local network (LAN). They are not routed on the Internet and no traffic can be sent to them from the Internet, they only supposed to work within the local network
@@ -59,13 +59,13 @@ A device can be on both a private and public network. Depending on where they ar
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115230725.png)
 **Source : Tryhackme**, not my real IP or MAC Address!\
 \
-These two devices will be able to use their private IP addresses to communicate with each other. However, any data sent to the Internet from either of these devices will be identified by the same public IP address. Public IP addresses are given by your **I**nternet **S**ervice **P**rovider (or **ISP**) at a monthly fee (your bill!).
+These two devices will be able to use their private IP addresses to communicate with each other. However, any data sent to the Internet from either of these devices will be identified by the same public IP address. Public IP addresses are given by your **I**nternet **S**ervice **P**rovider (or **ISP**) at a monthly fee (your bill!).\
 \
-As more and more devices become connected, it is becoming increasingly harder to get a public address that isn't already in use. Cisco, an industry giant in the world of networking, estimated that there would be approximately 50 billion devices connected on the Internet by the end of 2021. 
+As more and more devices become connected, it is becoming increasingly harder to get a public address that isn't already in use. Cisco, an industry giant in the world of networking, estimated that there would be approximately 50 billion devices connected on the Internet by the end of 2021. \
 \
-We have only discussed one version of the Internet Protocol addressing scheme known as IPv4, which uses a numbering system of 2^32 IP addresses (4.29 billion), still there will be a shortage!
+We have only discussed one version of the Internet Protocol addressing scheme known as IPv4, which uses a numbering system of 2^32 IP addresses (4.29 billion), still there will be a shortage!\
 \
-IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackle this issue. It supports up to 2^128 of IP addresses (340 trillion-plus), resolving the issues faced with IPv4 and is more efficient due to new methodologies.
+IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackle this issue. It supports up to 2^128 of IP addresses (340 trillion-plus), resolving the issues faced with IPv4 and is more efficient due to new methodologies.\
 \
 ## IPv4
 ---
@@ -84,7 +84,7 @@ IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackl
 \
 ## Check your local IP address
 ---
-If you are using Linux or MacOS you can open your terminal and type 
+If you are using Linux or MacOS you can open your terminal and type \
 ```bash 
 ifconfig
 ```
@@ -119,7 +119,7 @@ ipconfig /all
 \
 ###  `ether` 
 ---
-For the net-tools version typically found on Linux, the word `ether` is the _hardware class_, and the value following that is the hardware address. For the "Ethernet" hardware class the address is the card's MAC address. `ifconfig` shows the current hardware address of the interface, with its hardware class. For Ethernet interfaces, the class is `ether` and the hardware address is the MAC address.
+For the net-tools version typically found on Linux, the word `ether` is the _hardware class_, and the value following that is the hardware address. For the "Ethernet" hardware class the address is the card's MAC address. `ifconfig` shows the current hardware address of the interface, with its hardware class. For Ethernet interfaces, the class is `ether` and the hardware address is the MAC address.\
 \
 ## IPv4 Calculation
 ---
