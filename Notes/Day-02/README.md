@@ -70,18 +70,18 @@ IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackl
 
 ## IPv4
 ---
-![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115231813.png)
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115231813.png)\
 **Source : Tryhackme**, not my real IP or MAC Address!\
 
 ## IPv6
 ----
-![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115232224.png)
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115232224.png)\
 **Source : Tryhackme**, not my real IP Address!\
 
 ## IPv4 vs IPv6
 ---
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115232533.png)
-**Source : AVAST**\
+**Source : AVAST**
 
 ## Check your local IP address
 ---
@@ -94,7 +94,7 @@ For Windows machine you can open up the cmd prompt or powershell, then type
 ```Powershell
 ipconfig /all
 ```
-\
+
 >[!ifconfig]
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235710.png)
 >**Source : Internet**\
@@ -103,25 +103,25 @@ ipconfig /all
 ### ``inet``  
 ---
 ```inet``` (Internet protocol family) show the local IP address
-\
+
 ``` bash
 	inet 192.168.1.54  netmask 255.255.255.0  broadcast 192.168.1.255  
 ```
-\
+
 -    This is IP version 4 (IPv4) Using 32-bit decimal number
 -    inet IPv4 : ``192.168.1.54``
-\
+
 ```bash
 	inet6 fe80::a163:b52c:c585:7a47  prefixlen 64  scopeid 0x20<link>  
 ```
-\
+
 - This is new version of IP (IPv6), using 128 bits hexadecimal value
 - inet IPv6 : ``fe80::a163:b52c:c585:7a47``
-\
+
 ###  `ether` 
 ---
 For the net-tools version typically found on Linux, the word `ether` is the _hardware class_, and the value following that is the hardware address. For the "Ethernet" hardware class the address is the card's MAC address. `ifconfig` shows the current hardware address of the interface, with its hardware class. For Ethernet interfaces, the class is `ether` and the hardware address is the MAC address.\
-\
+
 ## IPv4 Calculation
 ---
 ```Calculation
