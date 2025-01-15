@@ -55,7 +55,7 @@ A device can be on both a private and public network. Depending on where they ar
 
 > [!Note]
 > An **Internet Protocol Address (IP ADDRESS)** is a unique address that identifies a device on the internet or a local network. IP stands for "Internet Protocol," which is the set of rules governing the format of data sent via the internet or local network
-
+\
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115230725.png)\
 **Source : Tryhackme**, not my real IP or MAC Address!\
 \
