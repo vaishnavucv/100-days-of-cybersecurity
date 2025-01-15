@@ -10,8 +10,8 @@ Images used in this file are not owned or made by me and are copied from interne
 3. IDENTIFYING DEVICES ON A NETWORK
 - a. **IP ADDRESS**
 - b. **MAC ADDRESS**
-
-
+\
+\
 # 1. INTRODUCTION
 ---
 A **NETWORK** consists of 2 or more computers linked to share resources. These devices include everything from your laptop and phone to security cameras, traffic lights, and even farming.   They are the basis of communication in IT. Networks are integrated into our everyday life. Because networks are so embedded in modern-day, networking is an essential concept in Cyber Security. 
@@ -19,7 +19,7 @@ A **NETWORK** consists of 2 or more computers linked to share resources. These d
 > [!NOTE]
 > **COMPUTER NETWORK** 
 > SET OF COMPUTERS THAT ARE CONNECTED TOGETHER SO AS TO SHARE INFORMATION
-@@ -42,142 +43,145 @@
+
 
 ![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115222650.png)**Source : Britannica**
 
