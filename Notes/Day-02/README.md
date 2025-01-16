@@ -34,9 +34,9 @@ A **NETWORK** consists of 2 or more computers linked to share resources. These d
 # 2. WHAT IS INTERNET
 ---
 Internet is one giant network that consists of many, many small networks within itself. The first iteration of **INTERNET** was within the **ARPANET** project in the late 1960s. Advanced Research Project Agency Network was the first public packet-switched computer network! Main use was for academic and research purposes. It was decommissioned in the late 1980s.
-
+\
 A side benefit of ARPANET's design was that because messages could be routed or rerouted in more than one direction, the network could continue to function even if parts of it were destroyed in the event of a military attack or other disaster. This project was funded by the United States Defence Department and was the first documented network in action. 
-
+\
 However, it wasn't until 1989 when the **INTERNET** as we know it was invented by Tim Berners Lee by the creation of the **W**orld **W**ide **W**eb (**WWW**). It wasn't until this point that the Internet started to be used as a repository for storing and sharing information, just like it is today.
 
 
@@ -153,9 +153,9 @@ IP address (or **I**nternet **P**rotocol) address can be used as a way of identi
 **Source : HOSTWINDS**
 
 
-An **IP ADDRESS** is a set of numbers that are divided into four octets. The value of each octet will summarise to be the IP address of the device on the network. This number is calculated through a technique known as **IP ADDRESSING & SUBNETTING**. IP addresses can change from device to device but cannot be active simultaneously more than once within the same network. 
+An **IP ADDRESS** is a set of numbers that are divided into four octets. The value of each octet will summarise to be the IP address of the device on the network. This number is calculated through a technique known as **IP ADDRESSING & SUBNETTING**. IP addresses can change from device to device but cannot be active simultaneously more than once within the same network. \
 
-IP Addresses follow a set of standards known as protocols. These protocols are the backbone of networking and force many devices to communicate in the same language. 
+IP Addresses follow a set of standards known as protocols. These protocols are the backbone of networking and force many devices to communicate in the same language. \
 
 A device can be on both a private and public network. Depending on where they are will determine what type of IP address they have: 
 
@@ -173,11 +173,11 @@ A device can be on both a private and public network. Depending on where they ar
 ![Image](Images/Pasted%20image%2020250115230725.png)
 **Source : Tryhackme**, not my real IP or MAC Address!
 
-These two devices will be able to use their private IP addresses to communicate with each other. However, any data sent to the Internet from either of these devices will be identified by the same public IP address. Public IP addresses are given by your **I**nternet **S**ervice **P**rovider (or **ISP**) at a monthly fee (your bill!).
+These two devices will be able to use their private IP addresses to communicate with each other. However, any data sent to the Internet from either of these devices will be identified by the same public IP address. Public IP addresses are given by your **I**nternet **S**ervice **P**rovider (or **ISP**) at a monthly fee (your bill!).\
 
-As more and more devices become connected, it is becoming increasingly harder to get a public address that isn't already in use. Cisco, an industry giant in the world of networking, estimated that there would be approximately 50 billion devices connected on the Internet by the end of 2021. 
+As more and more devices become connected, it is becoming increasingly harder to get a public address that isn't already in use. Cisco, an industry giant in the world of networking, estimated that there would be approximately 50 billion devices connected on the Internet by the end of 2021. \
 
-We have only discussed one version of the Internet Protocol addressing scheme known as IPv4, which uses a numbering system of 2^32 IP addresses (4.29 billion), still there will be a shortage!
+We have only discussed one version of the Internet Protocol addressing scheme known as IPv4, which uses a numbering system of 2^32 IP addresses (4.29 billion), still there will be a shortage!\
 
 IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackle this issue. It supports up to 2^128 of IP addresses (340 trillion-plus), resolving the issues faced with IPv4 and is more efficient due to new methodologies.
 
@@ -369,7 +369,7 @@ The 32-bit IP address is divided into sub-classes. These are given below:
 - **Class D** : 224–239  
 - **Class E** : 240–255
 
-The working of subnets starts in such a way that firstly it divides the subnets into smaller subnets. For communicating between subnets, routers are used. Each subnet allows its linked devices to communicate with each other. Subnetting for a network should be done in such a way that it does not affect the network bits.
+The working of subnets starts in such a way that firstly it divides the subnets into smaller subnets. For communicating between subnets, routers are used. Each subnet allows its linked devices to communicate with each other. Subnetting for a network should be done in such a way that it does not affect the network bits.\
 
 In class C the first 3 octets are network bits so it remains as it is. 
 
