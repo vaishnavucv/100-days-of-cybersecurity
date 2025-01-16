@@ -26,7 +26,7 @@ A **NETWORK** consists of 2 or more computers linked to share resources. These d
 > SET OF COMPUTERS THAT ARE CONNECTED TOGETHER SO AS TO SHARE INFORMATION
 
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115221827.png)
+[!Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115221827.png)
 
 **Source : Random pages on Internet**
 
@@ -44,7 +44,7 @@ However, it wasn't until 1989 when the **INTERNET** as we know it was invented b
 > **INTERNET** aka **NET** is worldwide system of interconnected Computer Networks and Electronic Devices that communicate with each other using an established set of **PROTOCOLS**.
 
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115222650.png)
+[!Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115222650.png)
 **Source : Britannica**
 
 The **INTERNET** is made up of **MANY SMALL NETWORKS** joined together. 
@@ -54,12 +54,12 @@ The **INTERNET** is made up of **MANY SMALL NETWORKS** joined together.
 ---
 There are mainly five types of Computer Networks: 
 
-![Image](Pasted%20image%2020250116121259.png)
+[!Image](Pasted%20image%2020250116121259.png)
 
 ## Personal Area Network (PAN)
 ---
 
-![Image](Pasted%20image%2020250116121501.png)
+[!Image](Pasted%20image%2020250116121501.png)
 
 - Designed to connect devices within a short range, typically around one person. 
 - Allows your personal devices, like smartphones, tablets, laptops, and wearables, to communicate and share data with each other. 
@@ -70,7 +70,7 @@ There are mainly five types of Computer Networks:
 ## Local Area Network (LAN)
 ---
 
-![Image](Pasted%20image%2020250116121713.png)
+[!Image](Pasted%20image%2020250116121713.png)
 
 - Network that connects computers through a common communication path, contained within a limited area
 - Has a logical and physical borders that a computer can broadcast
@@ -82,7 +82,7 @@ There are mainly five types of Computer Networks:
 ## Campus Area Network (CAN)
 ---
 
-![Image](Pasted%20image%2020250116122030.png)
+[!Image](Pasted%20image%2020250116122030.png)
 
 - Bigger than a LAN but smaller than a MAN. 
 - Usually used in places like a school or colleges. 
@@ -94,7 +94,7 @@ There are mainly five types of Computer Networks:
 ## Metropolitan Area Network (MAN)
 ---
  
- ![Image](Pasted%20image%2020250116122247.png)
+ [!Image](Pasted%20image%2020250116122247.png)
 
 - Larger than a LAN but smaller than a WAN. 
 - Connects computers over a geographical distance through a shared communication path over a city, town, or metropolitan area. 
@@ -106,7 +106,7 @@ There are mainly five types of Computer Networks:
 ## Wide Area Network (WAN)
 ---
 
-![Image](Pasted%20image%2020250116122439.png)
+[!Image](Pasted%20image%2020250116122439.png)
 
 - Connects computers over a large geographical distance through a shared communication path. 
 - Not restrained to a single location but extends over many locations.
@@ -149,7 +149,7 @@ We can change our name through deed poll, but we can't, change our fingerprints.
 
 IP address (or **I**nternet **P**rotocol) address can be used as a way of identifying a host on a network for a period of time, where that IP address can then be associated with another device without the IP address changing.
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115224629.png)
+[!Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115224629.png)
 **Source : HOSTWINDS**
 
 
@@ -163,14 +163,14 @@ A device can be on both a private and public network. Depending on where they ar
 - **PRIVATE or LOCAL or INTERNAL IP ADDRESS** : Identify a device amongst other devices. These are used in the local network (LAN). They are not routed on the Internet and no traffic can be sent to them from the Internet, they only supposed to work within the local network
 
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115225243.png)
+[!Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115225243.png)
 **SOURCE : GEOTARGETLY**
 
 > [!Note]
 > An **Internet Protocol Address (IP ADDRESS)** is a unique address that identifies a device on the internet or a local network. IP stands for "Internet Protocol," which is the set of rules governing the format of data sent via the internet or local network
 
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115230725.png)
+[!Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115230725.png)
 **Source : Tryhackme**, not my real IP or MAC Address!
 
 These two devices will be able to use their private IP addresses to communicate with each other. However, any data sent to the Internet from either of these devices will be identified by the same public IP address. Public IP addresses are given by your **I**nternet **S**ervice **P**rovider (or **ISP**) at a monthly fee (your bill!).\
@@ -184,7 +184,7 @@ IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackl
 ## IPv4
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115231813.png)
+[!Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115231813.png)
 **Source : Tryhackme**, not my real IP or MAC Address!
 
 ## IPv6
@@ -196,7 +196,7 @@ IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackl
 ## IPv4 vs IPv6
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115232533.png)
+[!Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115232533.png)
 **Source : AVAST**
 
 ## Check your local IP address
@@ -213,11 +213,11 @@ ipconfig /all
 ```
 
 >[!ifconfig]
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115235710.png)
+[!Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115235710.png)
 >**Source : Internet**
 
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115235335.png)
+[!Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250115235335.png)
 
 ### ``inet``  
 ---
@@ -301,7 +301,7 @@ To calculate the first octet (192.), from binary format to decimal:
 
 Suppose, in a network, two hosts A and B are connected. Now, both of them request for the same destination, on the same port number, say 1000, on the host side, at the same time. If NAT does only translation of IP addresses, then when their packets will arrive at the NAT, both of their IP addresses would be masked by the public IP address of the network and sent to the destination. Destination will send replies to the public IP address of the router. Thus, on receiving a reply, it will be unclear to NAT as to which reply belongs to which host (because source port numbers for both A and B are the same). Hence, to avoid such a problem, NAT masks the source port number as well and makes an entry in the NAT table.
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250116104057.png)
+[!Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250116104057.png)
 
 Inside refers to the addresses which must be translated. Outside refers to the addresses which are not in control of an organization. These are the network Addresses in which the translation of the addresses will be done.
 
@@ -352,7 +352,7 @@ Suppose, if there is a pool of 2 public IP addresses then only 2 private IP addr
 >[!NOTE]
 >A subnet is like a smaller group within a large network. It is a way to split a large network into smaller networks so that devices present in one network can transmits data more easily. Subnet makes the network faster and easier to manage and also improves the security of the network.
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250116111029.png)
+[!Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250116111029.png)
 
 - **Network Portion** :  The first few sections (octets) of an IP address identify the network that the device belongs to. This part of the IP address is common among all devices on the same network, allowing them to communicate with each other and share resources.
 - **Host Portion** : The remaining sections of the IP address specify the individual device, or “host,” within that network. This part makes each device unique within the network, allowing the router to distinguish between different devices.
@@ -443,13 +443,13 @@ a4:c3:f0:85:ac:2d
 
 1. Check your MAC address use the command ``ifconfig`` (Linux) or ``ipconfig`` (Windows)
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250116113423.png)
+[!Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/tree/main/Notes/Day-02/Images/Pasted%20image%2020250116113423.png)
 
 2. Copy and save the first three bytes of your address. (The first three bytes from image above is *f8:fe:5e*)
 
 4. Validate the information by performing a **MAC Address Lookup** on the internet. Here I am using [DNS CHECKER](https://dnschecker.org/mac-lookup.php)
 
-![Image](Pasted%20image%2020250116113536.png)
+[!Image](Pasted%20image%2020250116113536.png)
 - As you can see the OUI lookup identify a virtual network interface provided by VMware
 
 
@@ -468,7 +468,7 @@ a4:c3:f0:85:ac:2d
 - Pings can be performed against devices on a network, such as your home network or resources like websites. 
 - This tool can be easily used and comes installed on Operating Systems (OSs) such as Linux and Windows. The syntax to do a simple ping is ``ping <IP_address_or_website_URL>``.
 
-![Image](Pasted%20image%2020250116114038.png)
+[!Image](Pasted%20image%2020250116114038.png)
 Here we are pinging a device that has the public address of **8.8.8.8**. 
 
 - Ping informs us that we have sent four ICMP packets, all of which were received with an average time of 29.125 milliseconds. 
@@ -480,7 +480,7 @@ Here we are pinging a device that has the public address of **8.8.8.8**.
 - ICMP datagram is similar to a packet, which is an independent data entity.
 - ICMP header comes after IPv4 and IPv6 packet header.
 
-![Image](Pasted%20image%2020250116120655.png)
+[!Image](Pasted%20image%2020250116120655.png)
 
 
 In the ICMP packet format, the first 32 bits of the packet contain three fields:
