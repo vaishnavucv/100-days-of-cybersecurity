@@ -219,7 +219,7 @@ For Windows machine you can open up the cmd prompt or powershell, then type
 ipconfig /all
 ```
 
-[Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235710.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235710.png)
 **Source : Internet**
 
 
@@ -320,7 +320,7 @@ Inside refers to the addresses which must be translated. Outside refers to the a
 
 There are 3 ways to configure NAT: 
 
-#### Static NAT
+### Static NAT
 ---
  
 - Single unregistered (Private) IP address is mapped with a legally registered (Public) IP address 
@@ -330,7 +330,7 @@ There are 3 ways to configure NAT: 
 
 Suppose, if there are 3000 devices that need access to the Internet, the organization has to buy 3000 public addresses that will be very costly. 
 
-#### Dynamic NAT
+### Dynamic NAT
 ---
 
 - Unregistered IP address is translated into a registered (Public) IP address from a pool of public IP addresses. 
