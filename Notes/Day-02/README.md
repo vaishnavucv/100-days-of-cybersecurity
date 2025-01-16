@@ -425,6 +425,8 @@ Because an IP address is limited to indicating the network and the device addres
 ## 3. b. MAC ADDRESSES
 ---
 
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116191347.png)
+
 - Devices on a network will all have a physical network interface, which is a microchip board found on the device's motherboard. 
 - This network interface is assigned a unique address at the factory it was built at, called a **MAC** (**M**edia **A**ccess **C**ontrol ) address. 
 - The MAC address is a **twelve-character** hexadecimal number (_a base sixteen numbering system used in computing to represent numbers_) split into two's and separated by a colon. 
@@ -1138,4 +1140,112 @@ Those two numbers help the computers to keep track of which data was successfull
 >A computer initiates closing the connection by sending a packet with the FIN bit set to 1 (FIN = finish). The other computer replies with an ACK and another FIN. After one more ACK from the initiating computer, the connection is closed.
 
 [CHECK THIS OUT FOR MORE INFO ON 3 WAY HANDSHAKE !](https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:transporting-packets/a/transmission-control-protocol--tcp)
+
+# 16. UDP/IP
+---
+
+- **U**ser **D**atagram **P**rotocol (**UDP**) is another protocol that is used to communicate data between devices.
+- UDP is a **stateless** protocol that doesn't require a constant connection between the two devices for data to be sent. No acknowledgement is sent during a connection.
+- Three-way handshake does not occur, nor is there any synchronisation between the two devices
+- UDP is used in situations where applications can tolerate data being lost (such as video streaming or voice chat) or in scenarios where an unstable connection is not the end-all
+- UDP provides a mechanism to detect corrupt data in packets
+- it does not attempt to solve other problems that arise with packets, such as lost or out of order packets
+- UDP is sometimes known as the Unreliable Data Protocol
+- UDP is simple but fast, at least in comparison to other protocols that work over IP
+- It's often used for time-sensitive applications where speed is more important than accuracy
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116185613.png)
+
+- No process takes place in setting up a connection between two devices
+- No regard for whether or not data is received, and there are no safeguards such as those offered by TCP, such as data integrity
+- UDP packets are much simpler than TCP packets and have fewer headers
+
+Both protocols share some standard headers :
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116185719.png)
+
+**On Linux and Unix systems you can issue the `lsof` command to see which processes is using UDP ports**
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116185938.png)
+
+## UDP PACKET FORMAT
+---
+
+> [!NOTE]
+> When sending packets using UDP over IP, the data portion of each IP PACKET is formatted as a **UDP segment**. Each UDP segment contains an 8-byte header and variable length data.
+
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116190131.png)
+
+>[!IMPORTANT]
+>The first four bytes of the UDP header store the port numbers for the source and destination. 
+>
+>A networked device can receive messages on different virtual ports, similar to how an ocean harbor can receive boats on different ports. 
+>
+>The different ports help distinguish different types of network traffic.
+
+
+[CHECK THIS OUT TO LEARN MORE ABOUT UDP](https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:transporting-packets/a/user-datagram-protocol-udp)
+
+## CAPTURING THREE WAY HANDSHAKE USING WIRESHARK
+---
+
+The figure below shows the 3-way-handshake packets captured by [Wireshark](https://www.wireshark.org/)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116191445.png)
+
+[TO KNOW MORE ABOUT WIRESHARK, CLICK HERE](https://wiki.wireshark.org/)
+
+# 17. PORTS
+---
+
+- Ports are an essential point in which data can be exchanged
+- Networking devices use ports to enforce strict rules when communicating with one another
+- When a connection has been established, any data sent or received by a device will be sent through these ports
+- ports are a numerical value between **0** and **65535** (65,535).
+- Because ports can range from anywhere between 0-65535, there quickly runs the risk of losing track of what application is using what port
+- We associate applications, software and behaviours with a standard set of rules to avoid chaos
+- **Internet Assigned Numbers Authority** (IANA) maintains Service Name and Transport Protocol Port Number Registry which lists all port number reservations
+-  A service is said to be **listening** for a port when it has that specific port open
+- Once a service has made a connection, the port is in an **established** state
+- **Well-known ports** - 0 - 1023
+- **Registered ports** - 1024 - 49,151
+- **Dynamic ports** - 49,152 - 65,535
+- These protocols only follow the standards.
+- You can administer applications that interact with these protocols on a different port other than what is the standard (running a web server on 8080 instead of the 80 standard port).
+- Applications will presume that the standard is being followed, so you will have to provide a **colon (:)** along with the port number.
+
+
+>[!IMPORTANT]
+>**PORT** is a communication endpoint. At the software level, within an operating system, a port is a logical construct that identifies a specific process or a type of network service.
+
+
+
+| Port Number | Protocol | Transport Protocol |
+| ----------- | -------- | ------------------ |
+| 20/21       | FTP      | TCP                |
+| 22          | SSH      | TCP                |
+| 23          | Telnet   | TCP                |
+| 25          | SMTP     | TCP                |
+| 53          | DNS      | TCP/UDP            |
+| 67          | DHCP     | UDP                |
+| 69          | TFTP     | UDP                |
+| 80          | HTTP     | TCP                |
+| 110         | POP3     | TCP                |
+| 135         | RPC      | TCP                |
+| 137-139     | NetBIOS  | TCP/UDP            |
+| 143         | IMAP     | TCP                |
+| 161/162     | SNMP     | UDP                |
+| 389         | LDAP     | TCP/UDP            |
+| 443         | HTTPS    | TCP                |
+| 445         | SMB      | TCP                |
+| 514         | SYSLOG   | UDP                |
+
+- **`netstat`** command shows open ports on computer
+    - **netstat -an** displays connections in numerical form
+    - **netstat -b** displays executables tied to the open port (admin only)
+
+[NEED DETAILS ON REMAINING PORTS, CLICK HERE !](https://www.vmaxx.net/techinfo/ports.htm)
+[TO KNOW MORE ABOUT NETSTAT, CLICK HERE](https://docs.oracle.com/cd/E19504-01/802-5753/6i9g71m3i/index.html)
+
+
 
