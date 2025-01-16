@@ -28,6 +28,7 @@ Images used in this file are not owned or made by me and are copied from interne
 18. **PORT FORWARDING**
 19. **FIREWALLS**
 20. **VPN**
+21. **DNS**
 	
 
 # 1. INTRODUCTION
