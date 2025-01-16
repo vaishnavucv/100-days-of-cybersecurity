@@ -259,3 +259,36 @@ Because an IP address is limited to indicating the network and the device addres
     - Any other combination indicates an address in the range
   
 ## 3. b. MAC ADDRESSES
+---
+Devices on a network will all have a physical network interface, which is a microchip board found on the device's motherboard. This network interface is assigned a unique address at the factory it was built at, called a **MAC** (**M**edia **A**ccess **C**ontrol ) address. The MAC address is a **twelve-character** hexadecimal number (_a base sixteen numbering system used in computing to represent numbers_) split into two's and separated by a colon. These colons are considered separators. For example, **a4:c3:f0:85:ac:2d**. The first six characters represent the company that made the network interface, and the last six is a unique number.
+
+>[!NOTE]
+>MAC (Media Access Control) address are 48-bit hardware numbers and is provided by NIC Card'd manufacturer and gives the physical address of a computer
+
+The first three bytes of a MAC address were originally known as **OUI**’s, or **Organizational Unique Identifiers**. Each manufacturer of networking equipment was assigned an OUI, and was free to assign their own numbers in that block. They can be faked or "spoofed" in a process known as spoofing. This spoofing occurs when a networked device pretends to identify as another using its MAC address. When this occurs, it can often break poorly implemented security designs that assume that devices talking on a network are trustworthy.
+
+```MAC
+   OUI     NIC
+    |       |
+________ ________
+a4:c3:f0:85:ac:2d
+```
+
+## Checking vendor behind MAC address
+1. Check your MAC address use the command ``ifconfig`` (Linux) or ``ipconfig`` (Windows)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116113423.png)
+2. Copy and save the first three bytes of your address. (The first three bytes from image above is *f8:fe:5e*)
+3. Validate the information by performing a **MAC Address Lookup** on the internet. Here I am using [DNS CHECKER](https://dnschecker.org/mac-lookup.php)
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116113536.png)
+- As you can see the OUI lookup identify a virtual network interface provided by VMware
+
+
+# 4. PING (ICMP)
+Ping is one of the most fundamental network tools available to us. Ping uses **ICMP** (**I**nternet **C**ontrol **M**essage **P**rotocol) packets to determine the performance of a connection between devices, for example, if the connection exists or is reliable.
+
+The time taken for ICMP packets travelling between devices is measured by ping. This measuring is done using ICMP's echo packet and then ICMP's echo reply from the target device.
+
+Pings can be performed against devices on a network, such as your home network or resources like websites. This tool can be easily used and comes installed on Operating Systems (OSs) such as Linux and Windows. The syntax to do a simple ping is ``ping <IP_address_or_website_URL>``.
+
+![Images](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116114038.png)
+Here we are pinging a device that has the public address of **8.8.8.8**. Ping informs us that we have sent four ICMP packets, all of which were received with an average time of 29.125 milliseconds.
