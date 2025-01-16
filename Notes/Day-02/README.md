@@ -14,7 +14,12 @@ Images used in this file are not owned or made by me and are copied from interne
 	a. **IP ADDRESS**
 	b. **MAC ADDRESS**
 6. **PING (ICMP)**
-7. 
+7. **TOPOLOGIES** 
+8. **SWITCH**
+9. **ROUTER**
+10. **SUBNETTING**
+11. **ARP**
+12. **DHCP**
 	
 
 # 1. INTRODUCTION
@@ -522,8 +527,331 @@ Some common message types are as follows:
 - Ping : Simple kind of traceroute known as the echo-request message, it is used to measure the time taken by data to reach the destination and return to the source, these replies are known as echo-replies messages.
 For more information, [Check this out!](https://www.fortinet.com/resources/cyberglossary/internet-control-message-protocol-icmp)
 
-# TOPOLOGIES
+# 7. TOPOLOGIES
+---
 
 >[!NOTE]
 >Topology refer to the design or look of the network at hand
+
+### Star Topology
+---
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116131546.png]]
+
+- Devices are individually connected via a central networking device such as a switch or hub. 
+- This topology is the most commonly found today because of its reliability and scalability - despite the cost.
+- Any information sent to a device in this topology is sent via the central device to which it connects.
+- Because more cabling and the purchase of dedicated networking equipment is required for this topology, it is more expensive than any of the other topologies.
+- This topology is much more scalable in nature, which means that it is very easy to add more devices as the demand for the network increases.
+- The more the network scales, the more maintenance is required to keep the network functional. 
+- This increased dependence on maintenance can also make troubleshooting faults much harder. 
+- Furthermore, the star topology is still prone to failure - albeit reduced. If the centralised hardware that connects devices fails, these devices will no longer be able to send or receive data.
+
+### Bus Topology
+---
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116131732.png]]
+
+- This type of connection relies upon a single connection which is known as a backbone cable. 
+- This type of topology is similar to the leaf off of a tree in the sense that devices (leaves) stem from where the branches are on this cable.
+- Because all data destined for each device travels along the same cable, it is very quickly prone to becoming slow and bottlenecked if devices within the topology are simultaneously requesting data. 
+- This bottleneck also results in very difficult troubleshooting because it quickly becomes difficult to identify which device is experiencing issues with data all travelling along the same route.
+- However, with this said, bus topologies are one of the easier and more cost-efficient topologies to set up because of their expenses, such as cabling or dedicated networking equipment used to connect these devices.
+- Lastly, another disadvantage of the bus topology is that there is little redundancy in place in case of failures. 
+- This disadvantage is because there is a single point of failure along the backbone cable. 
+- If this cable were to break, devices can no longer receive or transmit data along the bus.
+
+### Ring Topology (Token Topology)
+---
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116132002.png]]
+
+- Devices such as computers are connected directly to each other to form a loop
+- There is little cabling required and less dependence on dedicated hardware such as within a star topology.
+- A ring topology works by sending data across the loop until it reaches the destined device, using other devices along the loop to forward the data. 
+- A device will only send received data from another device in this topology if it does not have any to send itself. 
+- If the device happens to have data to send, it will send its own data first before sending data from another device.
+- Because there is only one direction for data to travel across this topology, it is fairly easy to troubleshoot any faults that arise. 
+- It isn't an efficient way of data travelling across a network, as it may have to visit many multiple devices first before reaching the intended device.
+- Ring topologies are less prone to bottlenecks, such as within a bus topology, as large amounts of traffic are not travelling across the network at any one time. 
+- The design of this topology does, however, mean that a fault such as cut cable, or broken device will result in the entire networking breaking.
+
+### Point to Point Topology
+---
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116132130.png]]
+
+- Works on the functionality of the sender and receiver. 
+- Simplest communication between two nodes, in which one is the sender and the other one is the receiver.
+- Point-to-Point provides high bandwidth.
+
+### Mesh Topology
+---
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116132224.png]]
+
+- Every device is connected to another device via a particular channel. 
+- Every device is connected to another via dedicated channels. 
+- These channels are known as links. 
+- In Mesh Topology, the protocols used are AHCP (Ad Hoc Configuration Protocols), DHCP (Dynamic Host Configuration Protocol), etc.
+
+### Tree Topology
+---
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116132415.png]]
+
+- Tree topology is the variation of the Star topology. 
+- Has a hierarchical flow of data. 
+- Protocols like DHCP and SAC (Standard Automatic Configuration) are used.
+- Various secondary hubs are connected to the central hub which contains the repeater. 
+- This data flow from top to bottom i.e. from the central hub to the secondary and then to the devices or from bottom to top i.e. devices to the secondary hub and then to the central hub.
+- It is a multi-point connection and a non-robust topology because if the backbone fails the topology crashes. 
+
+### Hybrid Topology
+---
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116132437.png]]
+
+- Combination of all the various types of topologies 
+- Hybrid Topology is used when the nodes are free to take any form. 
+- It means these can be individuals such as Ring or Star topology or can be a combination of various types of topologies seen above. 
+- Each individual topology uses the protocol that has been discussed earlier.
+
+# 8. SWITCH
+---
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116133546.png]]
+
+- Dedicated devices within a network that are designed to aggregate multiple other devices such as computers, printers, or any other networking-capable device using ethernet. 
+- These various devices plug into a switch's port. 
+- Switches are usually found in larger networks such as businesses, schools, or similar-sized networks, where there are many devices to connect to the network. 
+- Switches can connect a large number of devices by having ports of 4, 8, 16, 24, 32, and 64 for devices to plug into.
+- Switches are much more efficient than their lesser counterpart (hubs/repeaters). 
+- Switches keep track of what device is connected to which port. 
+- When they receive a packet, instead of repeating that packet to every port like a hub would do, it just sends it to the intended target, thus reducing network traffic.
+- Different types of communication are supported here like unicast, multicast, and broadcast communication.
+- It operates in the Data Link Layer in the OSI Model.
+- It performs error checking before forwarding data.
+- It operates in full duplex mode.
+- It allocates each LAN segment to a limited bandwidth.
+- It uses Unicast (one-to-one), multicast (one-to-many), and broadcast (one-to-all) transmission modes.
+- Packet-switching techniques are used to transfer data packets from source to destination.
+- Both Switches and Routers can be connected to one another. 
+- The ability to do this increases the redundancy (the reliability) of a network by adding multiple paths for data to take.
+- If one path goes down, another can be used. 
+- Whilst this may reduce the overall performance of a network because packets have to take longer to travel, there is no downtime
+
+>[!IMPORTANT]
+>The Switch is a network device that is used to segment the networks into different subnetworks called subnets or LAN segments. It is responsible for filtering and forwarding the packets between LAN segments based on MAC address. 
+
+
+Switches are mainly classified into the following types that are mentioned below.
+
+**Virtual Switches :** 
+- Virtual Switches are the switches that are inside Virtual Machine hosting environments.
+
+**Routing Switches :** 
+- These are the switches that are used to connect LANs.
+- They also have the work of performing functions in the Network Layer of the OSI Model.
+
+**Unmanaged Switches :** 
+- Unmanaged Switches are the devices that are used to enable Ethernet devices that help in automatic data passing. 
+- These are generally used for home networks and small businesses. 
+- In case of the requirement of more switches, we just add more switches by plug and play method.
+
+**Managed Switches :** 
+- Managed Switches are switches having more complex networks. 
+- SNMP (Simple Network Management Protocol) can be used for configuring managed switches. 
+- These types of switches are mostly used in large networks having complex architecture. 
+- They provide better security levels and precision control but they are more costly than Unmanaged switches. 
+
+**LAN Switches :** 
+- LAN (Local Area Network) Switches are also called ethernet switches or data switches.
+- LAN switches always try to avoid overlapping of data packets in the network just by allocating bandwidth in such a manner.
+
+**PoE Switches :** 
+- Power over Ethernet(PoE) are the switches used in Gigabit Ethernets. 
+- PoE help in combining data and power transmission over the same cable so that it helps in receiving data and electricity over the same line.
+
+**Smart Switches :**
+- Smart Switches are switches having some extra controls on data transmissions but also have extra limitations over managed Switches. 
+- They are also called partially managed switches.
+
+**Stackable Switches :**
+- Stackable switches are connected through a backplane to combine two logical switches into a single switch.
+
+**Modular Switches :**
+- These types of switches help in accommodating two or more cards. 
+- Modular switches help in providing better flexibility.
+# 9. ROUTER
+---
+
+>[!IMPORTANT]
+>Routing is the process of selecting and defining paths for IP-packet traffic within or between networks as well as the process of managing network traffic overall.
+>
+>A routing table is a repository of all the routes to all the destinations in use by a network.
+
+- Routers connect networks to other networks and act as dispatchers. 
+- They analyze data to be sent across networks, identify where it needs to go, choose the best routes for it, and send it on its way.
+- Routers connect organizations to the outside world and can help to protect information from outside security threats.
+- While switches and routers differ in several other ways, a key difference is how they identify end devices.
+- A Layer 2 switch uniquely identifies a device by its MAC address. 
+- A Layer 3 router uniquely identifies a device by a network-assigned IP address.
+- Ethernet technology provides the routing rules that enable network-connected devices to talk to, and not over, one another.
+- If two or more connected devices on a network try to transmit data packets at the same time, a packet collision occurs. Ethernet was designed to solve the problem of packet collision.
+- It provides network devices with a set of rules that essentially says, "Make sure no one else is talking before you talk. If you hear someone talking while you're talking, stop, listen, and wait for the talking to end before you talk again."
+- The routing process starts when software on a host device uses a packet's contents, destination, or purpose to select a possible route from a routing table. A routing table is a repository of all the routes to all the destinations in use by a network.
+- Routing tables can be created manually and "learned" by software as it observes network traffic, or they can be built according to routing protocols.
+- A simple print job may be transmitted using static routing, where the host plugs in a previously used route. 
+- Dynamic routing allows a packet to be routed contextually, according to network conditions or factors such as reliability, performance, and security requirements.
+- Every pathway segment in the network has a metric assigned to it that's based on such factors. 
+- These metrics are shared with hosts and other nodes to be stored in routing tables and used for path selection.
+- A node is any device, such as a switch or router, that is connected to a network. 
+- A host is a type of node, such as a computer, that has a network address, the ability to permit access to a network, and the ability to participate in application-level functions.
+
+[For more information on routing, Check this out!](https://aws.amazon.com/what-is/routing/)
+
+# 10. SUBNETTING
+---
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116140541.png]]
+**SOURCE : Tryhackme**
+
+- Subnetting is the term given to splitting up a network into smaller, miniature networks within itself
+- Process of creating a subnetwork (also known as a subnet) within a network. 
+- Network interfaces and devices within a subnet can communicate with each other directly. 
+- Routers facilitate communication between different subnets. 
+- Provides each group of devices have their own space to communicate, that ultimately helps network to work easily.
+- Boosts security and makes it easier to manage the network, as each subnet can be monitored and controlled separately.
+- Subnetting is achieved by splitting up the number of hosts that can fit within the network, represented by a number called a **SUBNET MASK**.
+- The working of subnets starts in such a way that firstly it divides the subnets into smaller subnets. 
+- For communicating between subnets, routers are used. 
+- Each subnet allows its linked devices to communicate with each other. 
+- Subnetting for a network should be done in such a way that it does not affect the network bits.
+
+>[!IMPORTANT]
+>A subnet is like a smaller group within a large network. 
+>
+>It is a way to split a large network into smaller networks so that devices present in one network can transmits data more easily. 
+>
+>Subnet makes the network faster and easier to manage and also improves the security of the network.
+
+## Subnet mask :
+---
+
+- A 32-bit number used in IP addressing to separate the network portion of an IP address from the host portion. 
+- Helps computers and devices determine which part of an IP address refers to the network they are present, and which part refers to their specific location or address within that network.
+- Because an IP address is limited to indicating the network and the device address, IP addresses cannot be used to indicate which subnet an IP packet should go to. 
+- Routers within a network use something called a subnet mask to sort data into subnetworks.
+
+
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116111029.png]]
+
+- Subnets use IP addresses in three different ways:
+	- Identify the network address
+	- Identify the host address
+	- Identify the default gateway
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116140839.png]]
+
+Let's split these three up to understand their purposes into the table below:
+- **Network Portion** :  The first few sections (octets) of an IP address identify the network that the device belongs to. This part of the IP address is common among all devices on the same network, allowing them to communicate with each other and share resources.
+- **Host Portion** : The remaining sections of the IP address specify the individual device, or “host,” within that network. This part makes each device unique within the network, allowing the router to distinguish between different devices.
+
+The 32-bit IP address is divided into sub-classes. These are given below:
+
+- **Class A :** The network ID is 8 bits long and the host ID is 24 bits long.
+- **Class B :** The network ID is 16 bits long and the host ID is 16 bits long.
+- **Class C :** The network ID is 24 bits long and the host ID is 8 bits long.
+
+- **Class A**: the IP starts from 0 -126 (talking about the first octet from left) that’s how we identify classes.  
+- **Class B** : It starts from 128–191  
+- **Class C** : It starts from 192–223  
+- **Class D** : 224–239  
+- **Class E** : 240–255
+
+In class C the first 3 octets are network bits so it remains as it is. 
+
+- **For Subnet-1 :** The first bit which is chosen from the host id part is zero and the range will be from (193.1.2.00000000 till you get all 1’s in the host ID part i.e, 193.1.2.01111111) except for the first bit which is chosen zero for subnet id part. Thus, the range of subnet 1 is: **193.1.2.0 to 193.1.2.127**
+- **For Subnet-2 :** The first bit chosen from the host id part is one and the range will be from (193.1.2.100000000 till you get all 1’s in the host ID part i.e, 193.1.2.11111111). Thus, the range of subnet-2 is: **193.1.2.128 to 193.1.2.255**
+- Finally, after using the subnetting the total number of usable hosts is reduced from 254 to 252. 
+
+>[!NOTE]
+> To divide a network into four (2 2 ) parts you need to choose two bits from the host id part for each subnet i.e, (00, 01, 10, 11).
+> To divide a network into eight (2 3 ) parts you need to choose three bits from the host id part for each subnet i.e, (000, 001, 010, 011, 100, 101, 110, 111) and so on.
+>  We can say that if the total number of subnets in a network increases the total number of usable hosts decreases.
+
+
+Now, in small networks such as at home, you will be on one subnet as there is an unlikely chance that you need more than 254 devices connected at one time.
+
+However, places such as businesses and offices will have much more of these devices (PCs, printers, cameras and sensors), where subnetting takes place.
+
+
+**Point to point subnet**
+- A point-to-point subnet is a particular type of subnet used in point-to-point links that facilitate direct communication between two routers. 
+- Consists of a 31-bit subnet mask, leaving only two possible addresses in the network. 
+- Since point-to-point subnets contain only one host, a different broadcast address isn’t necessary.
+
+
+
+[Click here for Subnetting Cheatsheet PDF](https://nsrc.org/workshops/2009/summer/presentations/day3/subnetting.pdf)
+
+
+# 11. ARP (ADDRESS RESOLUTION PROTOCOL)
+---
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116141933.png]]
+
+- The technology that is responsible for allowing devices to identify themselves on a network.
+- ARP allows a device to associate its MAC address with an IP address on the network. 
+- **ARP** dynamically translates Internet addresses into the unique hardware addresses on local area networks.
+- Each device on a network will keep a log of the MAC addresses associated with other devices.
+- Devices can use ARP to find the MAC address (and therefore the physical identifier) of a device for communication
+- Each device within a network has a ledger to store information on, which is called a cache. In the context of ARP, this cache stores the identifiers of other devices on the network.
+- In order to map these two identifiers together (IP address and MAC address), ARP sends two types of messages: ARP Request and ARP Reply
+- When an **ARP request** is sent, a message is broadcasted on the network to other devices asking, "What is the mac address that owns this IP address?"
+- When any host that supports **ARP** receives an **ARP** request packet, the host notes the **IP** and hardware addresses of the requesting system and updates its mapping table.
+- They will only respond if they own that IP address and will send an **ARP reply** with its MAC address.
+- If the receiving host **IP** address does not match the requested address, the host discards the request packet. 
+- If the **IP** address does match, the receiving host sends a response packet to the requesting system. 
+- The requesting system stores the new mapping in its **ARP cache** for future use and uses it to transmit any similar pending Internet packets. 
+
+> [!NOTE]
+> Address Resolution Protocol (ARP) is responsible for finding the MAC (hardware) address related to a specific IP address. It works by broadcasting an ARP query, "Who has this IP address? Tell me." And the response is of the form, "The IP address is at this MAC address."
+
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116142231.png]]
+FOR MORE INFORMATION ABOUT ARP :
+- [RESOURCE 1 : MICROSOFT](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/arp)
+- [RESOURCE 2 : FORTINET](https://www.fortinet.com/resources/cyberglossary/what-is-arp)
+
+# 12. DHCP
+---
+
+![[https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116142724.png]]
+
+- IP addresses can be assigned either manually, by entering them physically into a device, or automatically and most commonly by using a **DHCP** (**D**ynamic **H**ost **C**onfiguration **P**rotocol) server. 
+
+>[!IMPORTANT]
+>Dynamic Host Configuration Protocol (DHCP) is a client/server protocol that automatically provides an Internet Protocol (IP) host with its IP address and other related configuration information such as the subnet mask and default gateway
+
+
+- When a device connects to a network, if it has not already been manually assigned an IP address, it sends out a request (**DHCP Discover**) to see if any DHCP servers are on the network. 
+- The DHCP server then replies back with an IP address the device could use (**DHCP Offer**). 
+- The device then sends a reply confirming it wants the offered IP Address (**DHCP Request**), and then lastly, the DHCP server sends a reply acknowledging this has been completed, and the device can start using the IP Address (**DHCP ACK**).
+
+
+>[!NOTE]
+>The Dynamic Host Configuration Protocol (DHCP) is a network management protocol used on Internet Protocol (IP) networks for automatically assigning IP addresses and other communication parameters to devices connected to the network using a client–server architecture.
+
+
+Every device on a TCP/IP-based network must have a unique unicast IP address to access the network and its resources. Without DHCP, IP addresses for new computers or computers that are moved from one subnet to another must be configured manually; IP addresses for computers that are removed from the network must be manually reclaimed.
+
+With DHCP, this entire process is automated and managed centrally. The DHCP server maintains a pool of IP addresses and leases an address to any DHCP-enabled client when it starts up on the network. Because the IP addresses are dynamic (leased) rather than static (permanently assigned), addresses no longer in use are automatically returned to the pool for reallocation.
+
+The network administrator establishes DHCP servers that maintain TCP/IP configuration information and provide address configuration to DHCP-enabled clients in the form of a lease offer. The DHCP server stores the configuration information in a database that includes:
+
+[FOR MORE INFORMATION ON DHCP, CLICK HERE](https://learn.microsoft.com/en-us/windows-server/networking/technologies/dhcp/dhcp-top)
+
 
