@@ -865,12 +865,12 @@ The network administrator establishes DHCP servers that maintain TCP/IP configur
 - Data sent across a network that follows the uniformity of the OSI model can be understood by other devices.
 - At every individual layer that data travels through, specific processes take place, and pieces of information are added to this data. This process is called encapsulation.
 
-![[Pasted image 20250116145350.png]]
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116145350.png)
 
 ## LAYER 07 : APPLICATION LAYER
 ---
 
-![[Pasted image 20250116153228.png]]
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116153228.png)
 
 - This is the only layer that directly interacts with data from the user. 
 - It is the layer in which protocols and rules are in place to determine how the user should interact with data sent or received.
@@ -882,7 +882,7 @@ The network administrator establishes DHCP servers that maintain TCP/IP configur
 ## LAYER 06 : PRESENTATION LAYER
 ---
 
-![[Pasted image 20250116153008.png]]
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116153008.png)
 
 - Layer 6 of the OSI model is the layer in which standardisation starts to take place. Because software developers can develop any software such as an email client differently, the data still needs to be handled in the same way — no matter how the software works.
 - This layer acts as a translator for data to and from the application layer (layer 7). 
@@ -893,7 +893,7 @@ The network administrator establishes DHCP servers that maintain TCP/IP configur
 ## LAYER 05 : SESSION LAYER
 ---
 
-![[Pasted image 20250116152714.png]]
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116152714.png)
 
 - Once data has been correctly translated or formatted from the presentation layer (layer 6), the session layer (layer 5) will begin to create and maintain the connection to other computer for which the data is destined. 
 - This is the layer responsible for opening and closing communication between the two devices. 
@@ -906,7 +906,7 @@ The network administrator establishes DHCP servers that maintain TCP/IP configur
 ## LAYER 04 : TRANSPORT LAYER
 ---
 
-![[Pasted image 20250116151325.png]]
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116151325.png)
 
 - Layer 4 of the OSI model plays a vital part in transmitting data across a network
 - When data is sent between devices, it follows one of two different protocols that are decided based upon several factors **TCP** or **UDP**
@@ -929,7 +929,7 @@ The network administrator establishes DHCP servers that maintain TCP/IP configur
 - This protocol reserves a constant connection between the two devices for the amount of time it takes for the data to be sent and received.
 - TCP incorporates error checking into its design. Error checking is how TCP can guarantee that data sent from the small chunks in the session layer (layer 5) has then been received and reassembled in the same order.
 
-![[Pasted image 20250116151630.png]]
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116151630.png)
 
 - TCP is the most commonly used of these protocols and accounts for the most traffic used on a TCP/IP network.
 - TCP is used for situations such as file sharing, internet browsing or sending an email. This usage is because these services require the data to be accurate and complete (no good having half a file!).
@@ -943,13 +943,13 @@ The network administrator establishes DHCP servers that maintain TCP/IP configur
 - There is no synchronisation between the two devices or guarantee; just hope for the best, and fingers crossed.
 - UDP is simple but fast, at least in comparison to other protocols that work over IP. 
 
-![[Pasted image 20250116151945.png]]
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116151945.png)
 
 UDP is useful in situations where there are small pieces of data being sent. For example, protocols used for discovering devices (ARP and DHCP) or larger files such as video streaming (where it is okay if some part of the video is pixelated. Pixels are just lost pieces of data!). It's often used for time-sensitive applications (such as real-time video streaming) where speed is more important than accuracy.
 ## LAYER 03 : NETWORK LAYER
 ---
 
-![[Pasted image 20250116150707.png]]
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116150707.png)
 
 - The third layer of the OSI model (network layer) is where routing & re-assembly of data takes place (from these small chunks to the larger chunk). 
 - Firstly, routing simply determines the most optimal path in which these chunks of data should be sent. The network layer finds the best physical path for the data to reach its destination.
@@ -967,7 +967,7 @@ UDP is useful in situations where there are small pieces of data being sent. For
 ## LAYER 02 : DATA LINK LAYER
 ---
 
-![[Pasted image 20250116150538.png]]
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116150538.png)
 
 - The data link layer focuses on the physical addressing of the transmission. 
 - It receives a packet from the network layer (including the IP address for the remote computer) and adds in the physical **MAC** (Media Access Control) address of the receiving endpoint. 
@@ -982,7 +982,7 @@ UDP is useful in situations where there are small pieces of data being sent. For
 ## LAYER 01 : PHYSICAL LAYER
 ---
 
-![[Pasted image 20250116150116.png]]
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116150116.png)
 
 - This layer references the physical components of the hardware used in networking and is the lowest layer that you will find. 
 - Devices use electrical signals to transfer data between each other in a binary numbering system (1's and 0's). 
