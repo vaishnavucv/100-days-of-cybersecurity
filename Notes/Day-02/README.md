@@ -536,7 +536,7 @@ For more information, [Check this out!](https://www.fortinet.com/resources/cyber
 ### Star Topology
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116131546.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116131546.png)
 
 - Devices are individually connected via a central networking device such as a switch or hub. 
 - This topology is the most commonly found today because of its reliability and scalability - despite the cost.
@@ -550,7 +550,7 @@ For more information, [Check this out!](https://www.fortinet.com/resources/cyber
 ### Bus Topology
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116131732.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116131732.png)
 
 - This type of connection relies upon a single connection which is known as a backbone cable. 
 - This type of topology is similar to the leaf off of a tree in the sense that devices (leaves) stem from where the branches are on this cable.
@@ -564,7 +564,7 @@ For more information, [Check this out!](https://www.fortinet.com/resources/cyber
 ### Ring Topology (Token Topology)
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116132002.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116132002.png)
 
 - Devices such as computers are connected directly to each other to form a loop
 - There is little cabling required and less dependence on dedicated hardware such as within a star topology.
@@ -579,7 +579,7 @@ For more information, [Check this out!](https://www.fortinet.com/resources/cyber
 ### Point to Point Topology
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116132130.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116132130.png)
 
 - Works on the functionality of the sender and receiver. 
 - Simplest communication between two nodes, in which one is the sender and the other one is the receiver.
@@ -588,7 +588,7 @@ For more information, [Check this out!](https://www.fortinet.com/resources/cyber
 ### Mesh Topology
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116132224.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116132224.png)
 
 - Every device is connected to another device via a particular channel. 
 - Every device is connected to another via dedicated channels. 
@@ -598,7 +598,7 @@ For more information, [Check this out!](https://www.fortinet.com/resources/cyber
 ### Tree Topology
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116132415.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116132415.png)
 
 - Tree topology is the variation of the Star topology. 
 - Has a hierarchical flow of data. 
@@ -610,7 +610,7 @@ For more information, [Check this out!](https://www.fortinet.com/resources/cyber
 ### Hybrid Topology
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116132437.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116132437.png)
 
 - Combination of all the various types of topologies 
 - Hybrid Topology is used when the nodes are free to take any form. 
@@ -620,7 +620,7 @@ For more information, [Check this out!](https://www.fortinet.com/resources/cyber
 # 8. SWITCH
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116133546.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116133546.png)
 
 - Dedicated devices within a network that are designed to aggregate multiple other devices such as computers, printers, or any other networking-capable device using ethernet. 
 - These various devices plug into a switch's port. 
@@ -714,7 +714,7 @@ Switches are mainly classified into the following types that are mentioned below
 # 10. SUBNETTING
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116140541.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116140541.png)
 **SOURCE : Tryhackme**
 
 - Subnetting is the term given to splitting up a network into smaller, miniature networks within itself
@@ -753,7 +753,7 @@ Switches are mainly classified into the following types that are mentioned below
 	- Identify the host address
 	- Identify the default gateway
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116140839.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116140839.png)
 
 Let's split these three up to understand their purposes into the table below:
 - **Network Portion** :  The first few sections (octets) of an IP address identify the network that the device belongs to. This part of the IP address is common among all devices on the same network, allowing them to communicate with each other and share resources.
@@ -801,7 +801,7 @@ However, places such as businesses and offices will have much more of these devi
 # 11. ARP (ADDRESS RESOLUTION PROTOCOL)
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116141933.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116141933.png)
 
 - The technology that is responsible for allowing devices to identify themselves on a network.
 - ARP allows a device to associate its MAC address with an IP address on the network. 
@@ -821,7 +821,7 @@ However, places such as businesses and offices will have much more of these devi
 > Address Resolution Protocol (ARP) is responsible for finding the MAC (hardware) address related to a specific IP address. It works by broadcasting an ARP query, "Who has this IP address? Tell me." And the response is of the form, "The IP address is at this MAC address."
 
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116142231.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116142231.png)
 FOR MORE INFORMATION ABOUT ARP :
 - [RESOURCE 1 : MICROSOFT](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/arp)
 - [RESOURCE 2 : FORTINET](https://www.fortinet.com/resources/cyberglossary/what-is-arp)
@@ -829,7 +829,7 @@ FOR MORE INFORMATION ABOUT ARP :
 # 12. DHCP
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20Image%2020250116142724.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116142724.png)
 
 - IP addresses can be assigned either manually, by entering them physically into a device, or automatically and most commonly by using a **DHCP** (**D**ynamic **H**ost **C**onfiguration **P**rotocol) server. 
 
