@@ -22,7 +22,12 @@ Images used in this file are not owned or made by me and are copied from interne
 12. **DHCP**
 13. **OSI MODEL**
 14. **PACKETS AND FRAMES**
-15.  **TCP/IP THREE-WAY HANDSHAKE**
+15. **TCP/IP THREE-WAY HANDSHAKE**
+16. **UDP/IP**
+17. **PORTS**
+18. **PORT FORWARDING**
+19. **FIREWALLS**
+20. **VPN**
 	
 
 # 1. INTRODUCTION
