@@ -40,7 +40,7 @@ A side benefit of ARPANET's design was that because messages could be routed or 
 However, it wasn't until 1989 when the **INTERNET** as we know it was invented by Tim Berners Lee by the creation of the **W**orld **W**ide **W**eb (**WWW**). It wasn't until this point that the Internet started to be used as a repository for storing and sharing information, just like it is today.
 
 
->[!INTERNET]
+>[!NOTE]
 > **INTERNET** aka **NET** is worldwide system of interconnected Computer Networks and Electronic Devices that communicate with each other using an established set of **PROTOCOLS**.
 
 
