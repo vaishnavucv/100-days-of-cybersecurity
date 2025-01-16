@@ -210,7 +210,7 @@ The 32-bit IP address is divided into sub-classes. These are given below:
 - **Class A :** The network ID is 8 bits long and the host ID is 24 bits long.
 - **Class B :** The network ID is 16 bits long and the host ID is 16 bits long.
 - **Class C :** The network ID is 24 bits long and the host ID is 8 bits long.
-
+\
 - **Class A**: the IP starts from 0 -126 (talking about the first octet from left) that’s how we identify classes.  
 - **Class B** : It starts from 128–191  
 - **Class C** : It starts from 192–223  
