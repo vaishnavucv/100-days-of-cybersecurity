@@ -855,3 +855,136 @@ The network administrator establishes DHCP servers that maintain TCP/IP configur
 [FOR MORE INFORMATION ON DHCP, CLICK HERE](https://learn.microsoft.com/en-us/windows-server/networking/technologies/dhcp/dhcp-top)
 
 
+# 13. OSI MODEL
+----
+
+- **OSI** model (or **O**pen **S**ystems **I**nterconnection Model) provides a framework dictating how all networked devices will send, receive and interpret data. 
+- OSI Model is a hypothetical networking framework that uses specific protocols and mechanisms in every layer of it. 
+- This model is used to divide the network architecture into seven different layers conceptually. 
+- One of the main benefits of the OSI model is that devices can have different functions and designs on a network while communicating with other devices. 
+- Data sent across a network that follows the uniformity of the OSI model can be understood by other devices.
+- At every individual layer that data travels through, specific processes take place, and pieces of information are added to this data. This process is called encapsulation.
+
+![[Pasted image 20250116145350.png]]
+
+## LAYER 07 : APPLICATION LAYER
+---
+
+![[Pasted image 20250116153228.png]]
+
+- This is the only layer that directly interacts with data from the user. 
+- It is the layer in which protocols and rules are in place to determine how the user should interact with data sent or received.
+- Software applications like web browsers and email clients rely on the application layer to initiate communications. 
+- Client software applications are not part of the application layer; rather the application layer is responsible for the protocols and data manipulation that the software relies on to present meaningful data to the user.
+- Application layer protocols include HTTP as well as SMTP (Simple Mail Transfer Protocol is one of the protocols that enables email communications).
+- Other protocols include **DNS** (**D**omain **N**ame **S**ystem), which is how website addresses are translated into IP addresses.
+
+## LAYER 06 : PRESENTATION LAYER
+---
+
+![[Pasted image 20250116153008.png]]
+
+- Layer 6 of the OSI model is the layer in which standardisation starts to take place. Because software developers can develop any software such as an email client differently, the data still needs to be handled in the same way — no matter how the software works.
+- This layer acts as a translator for data to and from the application layer (layer 7). 
+- The receiving computer will also understand data sent to a computer in one format destined for in another format. For example, when you send an email, the other user may have another email client to you, but the contents of the email will still need to display the same.
+- The presentation layer is responsible for translation, encryption, and compression of data. Security features such as data encryption (like HTTPS when visiting a secure site) occur at this layer.
+- It also makes the data presentable for applications to consume.
+
+## LAYER 05 : SESSION LAYER
+---
+
+![[Pasted image 20250116152714.png]]
+
+- Once data has been correctly translated or formatted from the presentation layer (layer 6), the session layer (layer 5) will begin to create and maintain the connection to other computer for which the data is destined. 
+- This is the layer responsible for opening and closing communication between the two devices. 
+- The time between when the communication is opened and closed is known as the session.  
+- When a connection is established, a session is created. Whilst this connection is active, so is the session.
+- The session layer is also responsible for closing the connection if it hasn't been used in a while or if it is lost. 
+- Additionally, a session _can_ contain "checkpoints," where if the data is lost, only the newest pieces of data are required to be sent, saving bandwidth. 
+- Sessions are unique. Data cannot travel over different sessions, but only across each session instead.
+
+## LAYER 04 : TRANSPORT LAYER
+---
+
+![[Pasted image 20250116151325.png]]
+
+- Layer 4 of the OSI model plays a vital part in transmitting data across a network
+- When data is sent between devices, it follows one of two different protocols that are decided based upon several factors **TCP** or **UDP**
+- It is responsible for end-to-end communication between the two devices. 
+- This includes taking data from the session layer and breaking it up into chunks called segments before sending it to layer 3. 
+- The transport layer on the receiving device is responsible for reassembling the segments into data the session layer can consume.
+- The transport layer is also responsible for flow control and error control. 
+- Flow control determines an optimal speed of transmission to ensure that a sender with a fast connection doesn’t overwhelm a receiver with a slow connection. 
+- The transport layer performs error control on the receiving end by ensuring that the data received is complete, and requesting a retransmission if it isn’t.
+
+### TCP (Transmission Control Protocol)
+---
+
+>[!IMPORTANT]
+>TCP is a communication standard for delivering data and messages through networks. TCP is a basic standard that defines the rules of the internet and is a common protocol used to deliver data in digital network communications.
+
+- TCP enables data to be transferred between applications and devices on a network. 
+- It is designed to break down a message, such as an email, into packets of data to ensure the message reaches its destination successfully and as quickly as possible
+- This protocol is designed with reliability and guarantee in mind.
+- This protocol reserves a constant connection between the two devices for the amount of time it takes for the data to be sent and received.
+- TCP incorporates error checking into its design. Error checking is how TCP can guarantee that data sent from the small chunks in the session layer (layer 5) has then been received and reassembled in the same order.
+
+![[Pasted image 20250116151630.png]]
+
+- TCP is the most commonly used of these protocols and accounts for the most traffic used on a TCP/IP network.
+- TCP is used for situations such as file sharing, internet browsing or sending an email. This usage is because these services require the data to be accurate and complete (no good having half a file!).
+
+### UDP (User Datagram Protocol)
+---
+
+- It lightweight data transport protocol that works on top of IP. 
+- UDP provides a mechanism to detect corrupt data in packets, but it does not attempt to solve other problems that arise with packets, such as lost or out of order packets. Hence UDP is sometimes known as the Unreliable Data Protocol.
+- Data that gets sent via UDP is sent to the computer whether it gets there or not. 
+- There is no synchronisation between the two devices or guarantee; just hope for the best, and fingers crossed.
+- UDP is simple but fast, at least in comparison to other protocols that work over IP. 
+
+![[Pasted image 20250116151945.png]]
+
+UDP is useful in situations where there are small pieces of data being sent. For example, protocols used for discovering devices (ARP and DHCP) or larger files such as video streaming (where it is okay if some part of the video is pixelated. Pixels are just lost pieces of data!). It's often used for time-sensitive applications (such as real-time video streaming) where speed is more important than accuracy.
+## LAYER 03 : NETWORK LAYER
+---
+
+![[Pasted image 20250116150707.png]]
+
+- The third layer of the OSI model (network layer) is where routing & re-assembly of data takes place (from these small chunks to the larger chunk). 
+- Firstly, routing simply determines the most optimal path in which these chunks of data should be sent. The network layer finds the best physical path for the data to reach its destination.
+- The network layer is responsible for facilitating data transfer between two different networks. 
+- If the two devices communicating are on the same network, then the network layer is unnecessary. 
+- The network layer breaks up segments from the transport layer into smaller units, called packets, on the sender’s device, and reassembling these packets on the receiving device. 
+- The protocols that determine "optimal" path that data should take to reach a device include **OSPF** (**O**pen **S**hortest **P**ath **F**irst) and **RIP** (**R**outing **I**nformation **P**rotocol).
+- The factors that decide what route is taken is decided by the following:
+	- Shortest Path : Has the least amount of devices that the packet needs to travel across
+	- Reliability : Have packets been lost on that path before
+	- Faster physical connection : Is the path using a copper connection (slower) or a fibre (considerably faster)
+- At this layer, everything is dealt with via IP addresses such as 192.168.1.100. 
+- Devices such as routers capable of delivering packets using IP addresses are known as Layer 3 devices — because they are capable of working at the third layer of the OSI model.
+
+## LAYER 02 : DATA LINK LAYER
+---
+
+![[Pasted image 20250116150538.png]]
+
+- The data link layer focuses on the physical addressing of the transmission. 
+- It receives a packet from the network layer (including the IP address for the remote computer) and adds in the physical **MAC** (Media Access Control) address of the receiving endpoint. 
+- Inside every network-enabled computer is a **N**etwork **I**nterface Card (**NIC**) which comes with a unique MAC address to identify it.
+- MAC addresses are set by the manufacturer and literally burnt into the card; they can’t be changed – although they can be spoofed. 
+- When information is sent across a network, it’s actually the physical address that is used to identify where exactly to send the information.
+- It is the job of the data link layer to present the data in a format suitable for transmission.
+- It facilitates data transfer between two devices on the SAME network. 
+- The data link layer takes packets from the network layer and breaks them into smaller pieces called frames. 
+- The data link layer is responsible for flow control and error control in intra-network communication 
+
+## LAYER 01 : PHYSICAL LAYER
+---
+
+![[Pasted image 20250116150116.png]]
+
+- This layer references the physical components of the hardware used in networking and is the lowest layer that you will find. 
+- Devices use electrical signals to transfer data between each other in a binary numbering system (1's and 0's). 
+- The physical layer of both devices must also agree on a signal convention so that the 1s can be distinguished from the 0s on both devices. 
+- For example, ethernet cables, Switches etc
