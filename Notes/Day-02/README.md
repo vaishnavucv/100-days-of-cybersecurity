@@ -13,13 +13,13 @@ Images used in this file are not owned or made by me and are copied from interne
 5. IDENTIFYING DEVICES ON A NETWORK
 	a. **IP ADDRESS**
 	b. **MAC ADDRESS**
-4. **PING (ICMP)**
-5. 
+6. **PING (ICMP)**
+7. 
 	
 
 # 1. INTRODUCTION
 ---
-A **NETWORK** consists of 2 or more computers linked to share resources. These devices include everything from your laptop and phone to security cameras, traffic lights, and even farming.   They are the basis of communication in IT. Networks are integrated into our everyday life. Because networks are so embedded in modern-day, networking is an essential concept in Cyber Security. 
+A **NETWORK** consists of 2 or more computers linked to share resources. These devices include everything from your laptop and phone to security cameras, traffic lights, and even farming.   They are the basis of communication in IT. Networks are integrated into our everyday life. Because networks are so embedded in modern-day, networking is an essential concept in Cyber Security.
 
 > [!NOTE]
 > **COMPUTER NETWORK** 
@@ -27,16 +27,16 @@ A **NETWORK** consists of 2 or more computers linked to share resources. These d
 
 
 ![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115221827.png)
-
+\
 **Source : Random pages on Internet**
 
 
 # 2. WHAT IS INTERNET
 ---
 Internet is one giant network that consists of many, many small networks within itself. The first iteration of **INTERNET** was within the **ARPANET** project in the late 1960s. Advanced Research Project Agency Network was the first public packet-switched computer network! Main use was for academic and research purposes. It was decommissioned in the late 1980s.
-\
+
 A side benefit of ARPANET's design was that because messages could be routed or rerouted in more than one direction, the network could continue to function even if parts of it were destroyed in the event of a military attack or other disaster. This project was funded by the United States Defence Department and was the first documented network in action. 
-\
+
 However, it wasn't until 1989 when the **INTERNET** as we know it was invented by Tim Berners Lee by the creation of the **W**orld **W**ide **W**eb (**WWW**). It wasn't until this point that the Internet started to be used as a repository for storing and sharing information, just like it is today.
 
 
@@ -54,12 +54,12 @@ The **INTERNET** is made up of **MANY SMALL NETWORKS** joined together.
 ---
 There are mainly five types of Computer Networks: 
 
-![Image](Pasted%20image%2020250116121259.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116121259.png)
 
 ## Personal Area Network (PAN)
 ---
 
-![Image](Pasted%20image%2020250116121501.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116121501.png)
 
 - Designed to connect devices within a short range, typically around one person. 
 - Allows your personal devices, like smartphones, tablets, laptops, and wearables, to communicate and share data with each other. 
@@ -70,7 +70,7 @@ There are mainly five types of Computer Networks:
 ## Local Area Network (LAN)
 ---
 
-![Image](Pasted%20image%2020250116121713.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116121713.png)
 
 - Network that connects computers through a common communication path, contained within a limited area
 - Has a logical and physical borders that a computer can broadcast
@@ -82,7 +82,7 @@ There are mainly five types of Computer Networks:
 ## Campus Area Network (CAN)
 ---
 
-![Image](Pasted%20image%2020250116122030.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116122030.png)
 
 - Bigger than a LAN but smaller than a MAN. 
 - Usually used in places like a school or colleges. 
@@ -94,7 +94,7 @@ There are mainly five types of Computer Networks:
 ## Metropolitan Area Network (MAN)
 ---
  
- ![Image](Pasted%20image%2020250116122247.png)
+ ![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116122247.png)
 
 - Larger than a LAN but smaller than a WAN. 
 - Connects computers over a geographical distance through a shared communication path over a city, town, or metropolitan area. 
@@ -106,7 +106,7 @@ There are mainly five types of Computer Networks:
 ## Wide Area Network (WAN)
 ---
 
-![Image](Pasted%20image%2020250116122439.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116122439.png)
 
 - Connects computers over a large geographical distance through a shared communication path. 
 - Not restrained to a single location but extends over many locations.
@@ -153,9 +153,9 @@ IP address (or **I**nternet **P**rotocol) address can be used as a way of identi
 **Source : HOSTWINDS**
 
 
-An **IP ADDRESS** is a set of numbers that are divided into four octets. The value of each octet will summarise to be the IP address of the device on the network. This number is calculated through a technique known as **IP ADDRESSING & SUBNETTING**. IP addresses can change from device to device but cannot be active simultaneously more than once within the same network. \
+An **IP ADDRESS** is a set of numbers that are divided into four octets. The value of each octet will summarise to be the IP address of the device on the network. This number is calculated through a technique known as **IP ADDRESSING & SUBNETTING**. IP addresses can change from device to device but cannot be active simultaneously more than once within the same network. 
 
-IP Addresses follow a set of standards known as protocols. These protocols are the backbone of networking and force many devices to communicate in the same language. \
+IP Addresses follow a set of standards known as protocols. These protocols are the backbone of networking and force many devices to communicate in the same language. 
 
 A device can be on both a private and public network. Depending on where they are will determine what type of IP address they have: 
 
@@ -173,24 +173,26 @@ A device can be on both a private and public network. Depending on where they ar
 ![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115230725.png)
 **Source : Tryhackme**, not my real IP or MAC Address!
 
-These two devices will be able to use their private IP addresses to communicate with each other. However, any data sent to the Internet from either of these devices will be identified by the same public IP address. Public IP addresses are given by your **I**nternet **S**ervice **P**rovider (or **ISP**) at a monthly fee (your bill!).\
+These two devices will be able to use their private IP addresses to communicate with each other. However, any data sent to the Internet from either of these devices will be identified by the same public IP address. Public IP addresses are given by your **I**nternet **S**ervice **P**rovider (or **ISP**) at a monthly fee (your bill!).
 
-As more and more devices become connected, it is becoming increasingly harder to get a public address that isn't already in use. Cisco, an industry giant in the world of networking, estimated that there would be approximately 50 billion devices connected on the Internet by the end of 2021. \
+As more and more devices become connected, it is becoming increasingly harder to get a public address that isn't already in use. Cisco, an industry giant in the world of networking, estimated that there would be approximately 50 billion devices connected on the Internet by the end of 2021.
 
-We have only discussed one version of the Internet Protocol addressing scheme known as IPv4, which uses a numbering system of 2^32 IP addresses (4.29 billion), still there will be a shortage!\
+We have only discussed one version of the Internet Protocol addressing scheme known as IPv4, which uses a numbering system of 2^32 IP addresses (4.29 billion), still there will be a shortage!
 
 IPv6 is a new iteration of the Internet Protocol addressing scheme to help tackle this issue. It supports up to 2^128 of IP addresses (340 trillion-plus), resolving the issues faced with IPv4 and is more efficient due to new methodologies.
 
 ## IPv4
 ---
 
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115231813.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115231813.png)|
+
 **Source : Tryhackme**, not my real IP or MAC Address!
 
 ## IPv6
 ----
 
-![](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115232224.png)
+![](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115232224.png)|
+
 **Source : Tryhackme**, not my real IP Address!
 
 ## IPv4 vs IPv6
@@ -212,9 +214,8 @@ For Windows machine you can open up the cmd prompt or powershell, then type
 ipconfig /all
 ```
 
->[!ifconfig]
-![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235710.png)
->**Source : Internet**
+[Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235710.png)
+**Source : Internet**
 
 
 ![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250115235335.png)
@@ -449,7 +450,7 @@ a4:c3:f0:85:ac:2d
 
 4. Validate the information by performing a **MAC Address Lookup** on the internet. Here I am using [DNS CHECKER](https://dnschecker.org/mac-lookup.php)
 
-![Image](Pasted%20image%2020250116113536.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116113536.png)
 - As you can see the OUI lookup identify a virtual network interface provided by VMware
 
 
@@ -468,7 +469,7 @@ a4:c3:f0:85:ac:2d
 - Pings can be performed against devices on a network, such as your home network or resources like websites. 
 - This tool can be easily used and comes installed on Operating Systems (OSs) such as Linux and Windows. The syntax to do a simple ping is ``ping <IP_address_or_website_URL>``.
 
-![Image](Pasted%20image%2020250116114038.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116114038.png)
 Here we are pinging a device that has the public address of **8.8.8.8**. 
 
 - Ping informs us that we have sent four ICMP packets, all of which were received with an average time of 29.125 milliseconds. 
@@ -480,7 +481,7 @@ Here we are pinging a device that has the public address of **8.8.8.8**.
 - ICMP datagram is similar to a packet, which is an independent data entity.
 - ICMP header comes after IPv4 and IPv6 packet header.
 
-![Image](Pasted%20image%2020250116120655.png)
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116120655.png)
 
 
 In the ICMP packet format, the first 32 bits of the packet contain three fields:
