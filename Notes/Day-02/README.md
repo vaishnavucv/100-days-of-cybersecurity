@@ -123,7 +123,7 @@ ipconfig /all
 
 ###  `ether` 
 ---
-For the net-tools version typically found on Linux, the word `ether` is the _hardware class_, and the value following that is the hardware address. For the "Ethernet" hardware class the address is the card's MAC address. `ifconfig` shows the current hardware address of the interface, with its hardware class. For Ethernet interfaces, the class is `ether` and the hardware address is the MAC address.\
+For the net-tools version typically found on Linux, the word `ether` is the _hardware class_, and the value following that is the hardware address. For the "Ethernet" hardware class the address is the card's MAC address. `ifconfig` shows the current hardware address of the interface, with its hardware class. For Ethernet interfaces, the class is `ether` and the hardware address is the MAC address.
 
 ## IPv4 Calculation
 ---
