@@ -1249,3 +1249,237 @@ The figure below shows the 3-way-handshake packets captured by [Wireshark](https
 
 
 
+# 18. PORT FORWARDING
+---
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116214157.png)
+
+- Port forwarding is an essential component in connecting applications and services to the Internet. 
+- Without port forwarding, applications and services such as web servers are only available to devices within the same direct network.
+- When you set up port forwarding, you essentially tell your router to send some data straight to a specific device on your network, bypassing certain security processes.
+- This can potentially increase your speeds and offer a number of other benefits.
+- Port forwarding opens specific ports
+- Port forwarding is configured at the router of a network
+
+>[!IMPORTANT]
+>Port forwarding is a network configuration technique that enables external devices to access services on a private network, which otherwise wouldn’t be directly accessible from the outside. 
+>
+>With port forwarding, you can connect from a local computer to another server
+
+[CHECK OUT THIS NORDVPN RESOURCE TO LEARN MORE](https://nordvpn.com/blog/port-forwarding/)
+
+# 19. FIREWALLS
+---
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116221037.png)
+
+- A firewall is a device within a network responsible for determining what traffic is allowed to enter and exit. 
+- An administrator can configure a firewall to **permit** or **deny** traffic from entering or exiting a network based on numerous factors such as:
+	- Has the firewall been told to accept/deny traffic from a specific network
+	- Has the firewall been told to accept/deny traffic destined for a specific network
+	- Has the firewall been told to accept/deny traffic destined for port 80 only
+	- Has the firewall been told to accept/deny traffic that is UDP, TCP or both
+- Firewalls perform packet inspection to determine the answers to these questions.
+- A firewall is a network security device designed to monitor, filter, and control incoming and outgoing network traffic based on predetermined security rules.
+- The primary purpose of a firewall is to establish a barrier between a trusted internal network and untrusted external networks.
+- Firewalls come in both hardware that can handle a magnitude of data to residential routers and software software such as Snort
+- Organizations can configure these rules to permit or deny traffic based on various criteria, such as source and destination IP addresses, port numbers, and protocol type.
+## TYPES OF FIREWALL
+---
+
+### Static Packet-Filtering Firewall
+---
+
+- Static packet-filtering firewalls, also known as stateless inspection firewalls, operate at the OSI network layer (layer 3). 
+- These offer basic filtering by checking all individual data packets sent across a network, based on where they're from and where they're attempting to go. 
+- Previously accepted connections are not tracked. This means each connection must be re-approved with every data packet sent.
+- Filtering is based on IP addresses, ports, and packet protocols.
+- These firewalls prevent two networks from directly connecting without permission.
+- Rules for filtering are set based on a manually created access control list. 
+- These are very rigid and it is difficult to cover unwanted traffic appropriately without compromising network usability. 
+- Static filtering requires ongoing manual revision to be used effectively. This can be manageable on small networks but can quickly become difficult on larger ones.
+- Inability to read application protocols means the contents of a message delivered within a packet cannot be read. Without reading the content, packet-filtering firewalls have a limited quality of protection.
+
+### Circuit-Level Gateway Firewall
+---
+
+- Circuit-level gateways operate on the session level (layer 5). 
+- These firewalls check for functional packets in an attempted connection, and if operating well will permit a persistent open connection between the two networks.
+- The firewall stops supervising the connection after this occurs.
+- Aside from its approach to connections, the circuit-level gateway can be similar to proxy firewalls.
+- The ongoing unmonitored connection is dangerous, as legitimate means could open the connection and later permit a malicious actor to enter uninterrupted.
+
+### Stateful Inspection Firewall
+---
+
+- Stateful inspection firewalls, also called dynamic packet-filtering firewalls, are unique from static filtering in their ability to monitor ongoing connections and remember past ones. 
+- These began by operating on the transport layer (layer 4) but nowadays, these firewalls can monitor many layers, including the application layer (layer 7).
+- Like the static filtering firewall, stateful inspection firewalls allow or block traffic based on technical properties, such as specific packet protocols, IP addresses, or ports. 
+- These firewalls also uniquely track, and filter based on the state of connections using a state table.
+- This firewall updates filtering rules based on past connection events logged in the state table by the screening router.
+- Filtering decisions are often based on the administrator's rules when setting up the computer and firewall. 
+- The state table allows these dynamic firewalls to make their own decisions based on previous interactions it has ‘learned’ from. For example, traffic types that caused disruptions in the past would be filtered out in the future. 
+- Stateful inspection's flexibility has cemented it as one of the most ubiquitous types of shields available.
+
+### Proxy Firewall
+---
+
+- Proxy Firewalls, also known as application-level firewalls (layer 7), are unique in reading and filtering application protocols. 
+- These combine application-level inspection, or ‘deep packet inspection (DPI),’ and stateful inspection.
+- A proxy firewall is as close to an actual physical barrier as it's possible to get. 
+- It acts as an additional two hosts between external networks and internal host computers, with one as a representative (or ‘proxy’) for each network.
+- Filtering is based on application-level data rather than just IP addresses, ports, and basic packet protocols (UDP, ICMP) like in packet-based firewalls. 
+- It essentially looks at and evaluates incoming data. If no problem is detected, the data is allowed to pass through to the user.
+- The downside to this kind of heavy security is that it sometimes interferes with incoming data that isn't a threat, leading to functionality delays.
+
+### Next-Generation Firewall (NGFW)
+---
+
+- It combines the features of a traditional firewall with network intrusion prevention systems.
+- Threat-specific next-generation firewalls are designed to examine and identify specific threats, such as advanced malware, at a more granular level. 
+- More frequently used by businesses and sophisticated networks, they provide a holistic solution to filtering out threats.
+
+### Hybrid Firewall
+---
+
+As implied by the name, hybrid firewalls use two or more firewall types in a single private network.
+
+CHECK THESE OUT TO READ MORE ON FIREWALL
+1. **KASPERSKY** : [CLICK HERE](https://www.kaspersky.com/resource-center/definitions/firewall)
+2. **CLOUDFLARE** : [CLICK HERE](https://www.cloudflare.com/learning/security/what-is-a-firewall/)
+3. **NIST** : [CLICK HERE](https://csrc.nist.gov/glossary/term/firewall)
+4. **CISCO** : [CLICK HERE](https://www.cisco.com/site/us/en/learn/topics/security/what-is-a-firewall.html)
+5. **FORTINET** : [CLICK HERE](https://www.fortinet.com/resources/cyberglossary/firewall#:~:text=A firewall is a network,network and untrusted external networks.)
+# 20. VPN
+---
+
+- A **V**irtual **P**rivate **N**etwork ( **VPN** ) is a technology that allows devices on separate networks to communicate securely by creating a dedicated path between each other over the Internet (known as a tunnel). 
+- Devices connected within this tunnel form their own private network.
+- The encrypted connection helps ensure that sensitive data is safely transmitted. 
+- It prevents unauthorized people from eavesdropping on the traffic and allows the user to conduct work remotely.
+- VPNs are using tunneling protocols that act as rules for sending the data. 
+- It provides detailed instructions on packaging the data and what checks to perform when it reaches its destination. 
+- These different methods directly affect the process speed and security.
+
+> [!IMPORTANT]
+>
+> A Virtual Private Network is a way to create a secure "tunnel" between two networks
+> VPNs are also commonly used for an employee to log into their workplace when they are not on site (such as working from home or travelling for business matters)
+> VPNs are also used where networks (such as coffee shops) do not provide encryption, and are a great way of preventing others from reading your network traffic.
+## Most common VPN protocols
+---
+### Internet Protocol Security (IPSec)
+---
+
+- IPSec is a VPN tunneling protocol that secures data exchange by enforcing session authentication and data packet encryption. 
+- It is twofold encryption — the encrypted message sits in the data packet, which is further encrypted again. 
+- IPSec protocol combines with other protocols for added security and frequently utilizes Site-to-site VPN setups due to its high compatibility.
+
+### Layer 2 Tunneling Protocol (L2TP)
+---
+
+- L2TP works by generating a secure tunnel between two L2TP connection points. 
+- Once established, it uses an additional tunneling protocol to encrypt the sent data, i.e., IPSec. L2TP's complex architecture helps to ensure high security of the exchanged data. 
+- It's another popular choice for Site-to-site setups, especially when higher security is needed.
+
+### Point to Point Protocol (PPP)
+---
+
+- This technology is used by PPTP to allow for authentication and provide encryption of data. 
+- VPNs work by using a private key and public certificate (similar to **SSH**). 
+- A private key & certificate must match for you to connect.
+- This technology is not capable of leaving a network by itself (non-routable).
+
+### Point–to–Point Tunneling Protocol (PPTP)
+---
+
+- PPTP is another tunneling protocol that creates a tunnel with a PPTP cipher. 
+- Since the creation of the cipher in the '90s, the computing power has increased exponentially. 
+- Brute-forcing the cipher wouldn't take too long to crack it to reveal the exchanged data. 
+- For this reason, technology rarely uses this cipher — a replacement containing more secure tunneling protocols with more advanced encryption is preferable.
+
+### SSL and TLS
+---
+
+- Secure Socket Layer and Transport Layer Security protocols are the same standard that encrypts HTTPS web pages. 
+- Web browser acts as the client, and user access is limited to specific applications rather than the entire network. 
+- No additional software is usually required. Usually, remote access VPNs use SSL/TLS.
+
+### OpenVPN
+---
+
+- OpenVPN is an open-source enhancement of the SSL/TLS framework with additional cryptographic algorithms to make your encrypted tunnel even safer. 
+- It's the go-to tunneling protocol for its high security and efficiency. 
+- Though, compatibility and setup can be a bit hit or miss as you won't be able to install it natively on many devices to form router to router VPN networks. So, the performance may vary.
+- It comes in User Datagram Protocol (UDP) or Transmission Control Protocol (TCP) versions.
+- UDP is faster because it uses fewer data checks, while TCP is slower but better protects data integrity.
+- OpenVPN is a well-rounded and secure tunneling protocol and is popular for both remote access and site-to-site virtual private network uses.
+
+### Secure Shell (SSH)
+---
+
+- SSH generates an encrypted connection and allows port forwarding to remote machines via a secured channel. 
+- It is useful for accessing your office desktop via your laptop at home. 
+- While it does add additional flexibility, SSH channels should always be under close supervision to provide a direct entry point for breach. That's why it's a better fit only in remote access setups.
+
+### Wireguard
+---
+
+- The most recent widely available tunneling protocol is less complex but much more efficient and safer than IPSec and OpenVPN. 
+- It relies on highly streamlined code to squeeze the best possible performance with a minimal margin of error. 
+- While it still is in the early adoption stage, you could find offices using Site-to-site connections based on Wireguard. 
+
+
+BELOW ARE SOME RESOURCES THAT YOU MIGHT FIND INTERESTING
+1. [KASPERSKY](https://www.kaspersky.com/resource-center/definitions/what-is-a-vpn)
+2. [MICROSOFT](https://azure.microsoft.com/en-us/resources/cloud-computing-dictionary/what-is-vpn)
+3. [CISCO](https://www.cisco.com/c/en_in/products/security/vpn-endpoint-security-clients/what-is-vpn.html#~how-a-vpn-works)
+4. [NORD VPN](https://nordvpn.com/what-is-a-vpn/)
+5. [FORTINET](https://www.fortinet.com/resources/cyberglossary/what-is-a-vpn)
+
+# 21. DNS
+---
+
+- DNS (Domain Name System) provides a simple way for us to communicate with devices on the internet without remembering complex numbers.
+- It is the protocol responsible for resolving hostnames, such as tryhackme.com, to their respective IP addresses.
+- Each device connected to the Internet has a unique IP address which other machines use to find the device. 
+- DNS servers eliminate the need for humans to memorize IP addresses such as 192.168.1.1 (in IPv4), or more complex newer alphanumeric IP addresses such as 2400:cb00:2048:1::c629:d7a2 (in IPv6).
+- The process of DNS resolution involves converting a hostname into a computer-friendly IP address.
+- An IP address is given to each device on the Internet, and that address is necessary to find the appropriate Internet device.
+
+## DOMAIN HIERARCHY
+---
+
+### TLD (Top-Level Domain)
+---
+
+- A TLD is the most righthand part of a domain name. So, for example, the example.com TLD is **.com**. 
+- There are two types of TLD, gTLD (Generic Top Level) and ccTLD (Country Code Top Level Domain). 
+- A gTLD was meant to tell the user the domain name's purpose; for example, a .com would be for commercial purposes, .org for an organisation, .edu for education and .gov for government. 
+- A ccTLD was used for geographical purposes, for example, .ca for sites based in Canada, .co.uk for sites based in the United Kingdom and so on. 
+- Due to such demand, there is an influx of new gTLDs ranging from .online , .club , .website , .biz and so many more. 
+
+### Second-Level Domain
+---
+
+- Taking example.com as an example, the **.com** part is the TLD, and **example** is the Second Level Domain. 
+- When registering a domain name, the second-level domain is limited to 63 characters + the TLD and can only use a-z 0-9 and hyphens (cannot start or end with hyphens or have consecutive hyphens).
+
+### Subdomain
+---
+
+- A subdomain sits on the left-hand side of the Second-Level Domain using a period to separate it; for example, in the name **abc.example.com** the **abc** part is the **subdomain**. 
+- A subdomain name has the same creation restrictions as a Second-Level Domain, being limited to 63 characters and can only use a-z 0-9 and hyphens (cannot start or end with hyphens or have consecutive hyphens).
+- You can use multiple subdomains split with periods to create longer names, such as **alphabet.abcd.example.com**. But the length must be kept to 253 characters or less.
+- There is no limit to the number of subdomains you can create for your domain name.
+
+
+
+For a full list of over 2000 TLDs [click here](https://data.iana.org/TLD/tlds-alpha-by-domain.txt).
+
+## DNS RECORDS
+---
+
+>[!IMPORTANT]
+>A Domain Name System (DNS) record is a set of instructions used to connect domain names with internet protocol (IP) addresses within DNS servers
+
