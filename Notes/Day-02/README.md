@@ -20,6 +20,9 @@ Images used in this file are not owned or made by me and are copied from interne
 10. **SUBNETTING**
 11. **ARP**
 12. **DHCP**
+13. **OSI MODEL**
+14. **PACKETS AND FRAMES**
+15.  **TCP/IP THREE-WAY HANDSHAKE**
 	
 
 # 1. INTRODUCTION
@@ -988,3 +991,151 @@ UDP is useful in situations where there are small pieces of data being sent. For
 - Devices use electrical signals to transfer data between each other in a binary numbering system (1's and 0's). 
 - The physical layer of both devices must also agree on a signal convention so that the 1s can be distinguished from the 0s on both devices. 
 - For example, ethernet cables, Switches etc
+
+# 14. PACKETS AND FRAMES
+---
+
+- Packets and frames are small pieces of data that, when forming together, make a larger piece of information or message. 
+- They are two different things in the OSI model. 
+- A frame is at layer 2 - the data link layer, meaning there is no such information as IP addresses. Think of this as putting an envelope within an envelope and sending it away. The first envelope will be the packet that you mail, but once it is opened, the envelope within still exists and contains data (this is a frame). This process is called encapsulation.
+- When we are talking about anything IP addresses, we are talking about packets. 
+- When the encapsulating information is stripped away, we're talking about the frame itself.
+- Packets are an efficient way of communicating data across networked devices because this data is exchanged in small pieces, there is less chance of bottlenecking occurring across a network than large messages being sent at once.
+- When loading an image from a website, this image is not sent to your computer as a whole, but rather small pieces where it is reconstructed on your computer.
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116154748.png)
+**Source : Tryhackme**
+
+- Packets have different structures that are dependant upon the type of packet that is being sent.
+- A packet using Internet Protocol will have a set of headers that contain additional pieces of information to the data that is being sent across a network, some notable ones are listed below
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116154930.png)
+
+# 15. TCP/IP  THREE-WAY HANDSHAKE
+---
+
+- **TCP** (or **T**ransmission **C**ontrol **P**rotocol for short) is another one of these rules used in networking.
+
+- This protocol is very similar to the OSI model that we have previously discussed in room three of this module so far. The TCP/IP protocol consists of four layers and is arguably just a summarised version of the OSI model. 
+
+- These layers are:
+
+	- Application
+	- Transport
+	- Internet
+	- Network interface
+
+- Information is added to each layer of the TCP model as the piece of data (or packet) traverses it. This process is known as encapsulation - where the reverse of this process is decapsulation.
+
+- It is **connection-based**, which means that TCP must establish a connection between both a client and a device acting as a server **before** data is sent.
+
+- TCP guarantees that any data sent will be received on the other end by a process named the Three-way handshake.
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116170330.png)
+
+- TCP packets contain various sections of information known as headers that are added from encapsulation. 
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116170445.png)
+
+The TCP/IP model consists of several types of protocols, including:
+    - TCP and IP
+    - Address Resolution Protocol (ARP)
+    - Internet Control Message Protocol (ICMP)
+    - Reverse Address Resolution Protocol (RARP)
+    - User Datagram Protocol (UDP)
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116171316.png)
+
+
+
+## THREE WAY HANDSHAKE 
+---
+
+Three-way handshake is the term given for the process used to establish a connection between two devices. The Three-way handshake communicates using a few special messages :
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116170549.png)
+
+## TCP Flags
+---
+
+|Flag|Name|Function|
+|---|---|---|
+|SYN|Synchronize|Set during initial communication. Negotiating of parameters and sequence numbers|
+|ACK|Acknowledgment|Set as an acknowledgement to the SYN flag. Always set after initial SYN|
+|RST|Reset|Forces the termination of a connection (in both directions)|
+|FIN|Finish|Ordered close to communications|
+|PSH|Push|Forces the delivery of data without concern for buffering|
+|URG|Urgent|Data inside is being sent out of band. Example is cancelling a message|
+
+## TCP PACKET FORMAT
+---
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116171357.png)
+
+
+### INITIATING A CONNECTION
+---
+
+Any sent data is given a random number sequence and is reconstructed using this number sequence and incrementing by 1. Both computers must agree on the same number sequence for data to be sent in the correct order. This order is agreed upon during three steps:
+1. **SYN** - Client: Here's my Initial Sequence Number(**ISN**) to **SYNc**hronise with (0)
+2. **SYN/ACK** - Server: Here's my Initial Sequence Number (**ISN**) to **SYN**chronise with (5,000), and I **ACK**nowledge your initial number sequence (0)
+3. **ACK** - Client: I **ACK**nowledge your Initial Sequence Number (**ISN**) of (5,000), here is some data that is my **ISN**+1 (0 + 1)
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116170654.png)
+
+### ESTABLISH CONNECTION
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116171417.png)
+
+### TCP HEADER WITH SYN AND ACK BITS HIGHLIGHTED
+---
+
+>[!NOTE]
+>The first computer sends a packet with the SYN bit set to ‍  (SYN = "synchronize?"). The second computer sends back a packet with the ACK bit set to ‍  (ACK = "acknowledge!") plus the SYN bit set to ‍ . The first computer replies back with an ACK.
+
+
+The SYN and ACK bits are both part of the TCP header :
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116171443.png)
+
+>[!NOTE]
+>The three packets(**SYN**,**SYN/ACK** and **ACK**) involved in the three-way handshake do not typically include any data. Once the computers are done with the handshake, they're ready to receive packets containing actual data.
+
+### SENDING PACKETS OF DATA
+---
+
+IMAGE DEMONSTRATE THE PROCESS OF SHARING OF DATA
+
+>[!NOTE]
+>The first computer sends a packet with data and a sequence number. 
+>The second computer acknowledges it by setting the ACK bit and increasing the acknowledgement number by the length of the received data.
+
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116171448.png)
+
+### SEQUENCE AND ACKNOWLEDGEMENT DATA
+---
+
+>[!NOTE]
+>When a packet of data is sent over TCP, the recipient must always acknowledge what they received. The first computer sends a packet with data and a sequence number. The second computer acknowledges it by setting the ACK bit and increasing the acknowledgement number by the length of the received data.
+
+
+The sequence and acknowledgement numbers are part of the TCP header :
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116171453.png)
+
+Those two numbers help the computers to keep track of which data was successfully received, which data was lost, and which data was accidentally sent twice.
+
+### TCP Closing a Connection :
+---
+
+- TCP will close a connection once a device has determined that the other device has successfully received all of the data
+- Either computer can close the connection when they no longer want to send or receive data
+- Because TCP reserves system resources on a device, it is best practice to close TCP connections as soon as possible
+- To initiate the closure of a TCP connection, the device will send a **FIN** packet to the other device
+- The other device will have to acknowledge this packet
+
+![Image](https://github.com/rockin-buddha/100-days-of-cybersecurity/blob/main/Notes/Day-02/Images/Pasted%20image%2020250116171502.png)
+
+>[!NOTE]
+>A computer initiates closing the connection by sending a packet with the FIN bit set to 1 (FIN = finish). The other computer replies with an ACK and another FIN. After one more ACK from the initiating computer, the connection is closed.
+
+[CHECK THIS OUT FOR MORE INFO ON 3 WAY HANDSHAKE !](https://www.khanacademy.org/computing/computers-and-internet/xcae6f4a7ff015e7d:the-internet/xcae6f4a7ff015e7d:transporting-packets/a/transmission-control-protocol--tcp)
+
