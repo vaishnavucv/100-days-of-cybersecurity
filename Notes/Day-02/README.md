@@ -1596,3 +1596,15 @@ The most common types of DNS records are:
 - Text, or TXT records, store textual information related to domains and subdomains. 
 - Text records allow for the storage of SPF records and email verification records. 
 - DKIM and DMARC records, which are stored in TXT records, help email servers confirm that a message is coming from a reliable source.
+
+## WHAT HAPPENS WHEN YOU MAKE A DNS REQUEST
+---
+
+- When you request a domain name, your computer first checks its local cache to see if you've previously looked up the address recently; if not, a request to your Recursive DNS Server will be made.
+- A Recursive DNS Server is usually provided by your ISP, but you can also choose your own. This server also has a local cache of recently looked up domain names. If a result is found locally, this is sent back to your computer, and your request ends here (this is common for popular and heavily requested services such as Google, Facebook, Twitter).
+- If the request cannot be found locally, a journey begins to find the correct answer, starting with the internet's root DNS servers.
+- The root servers act as the DNS backbone of the internet; their job is to redirect you to the correct Top Level Domain Server, depending on your request. If, for example, you request www.example.com, the root server will recognise the Top Level Domain of .com and refer you to the correct TLD server that deals with .com addresses.
+-The TLD server holds records for where to find the authoritative server to answer the DNS request. The authoritative server is often also known as the nameserver for the domain. You'll often find multiple nameservers for a domain name to act as a backup in case one goes down.
+- An authoritative DNS server is the server that is responsible for storing the DNS records for a particular domain name and where any updates to your domain name DNS records would be made.
+- Depending on the record type, the DNS record is then sent back to the Recursive DNS Server, where a local copy will be cached for future requests and then relayed back to the original client that made the request.
+- DNS records all come with a TTL (Time To Live) value. This value is a number represented in seconds that the response should be saved for locally until you have to look it up again. Caching saves on having to make a DNS request every time you communicate with a server.
