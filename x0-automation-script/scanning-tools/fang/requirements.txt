@@ -1,0 +1,5 @@
+colorama==0.4.6
+dnspython==2.4.2
+python-whois==0.7.3
+tabulate==0.9.0
+tqdm==4.68.0
