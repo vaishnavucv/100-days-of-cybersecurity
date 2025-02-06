@@ -256,7 +256,7 @@ class DomainScanner:
                 self.log(f"  - Directory Traversal Test Failed for Payload {payload}: {e}")
 
     def runScan(self):
-#       self.portScanning()
+        self.portScanning()
         self.checkDNSEnumeration()
         self.checkDirectories()
         self.checkSSL()
