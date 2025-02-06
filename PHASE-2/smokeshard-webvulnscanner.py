@@ -1,3 +1,7 @@
+# Domain Vulnerability Scanner
+# Author: @smokeshard on Discord
+# ======================================================================================================================
+
 import datetime
 import http.client
 import re
@@ -73,20 +77,29 @@ class DomainScanner:
             self.log(f"  - SSL Check Failed: {e}")
     
     def checkHTTPHeaders(self):
-        self.log("\n[+] Checking HTTP Headers...\n")
+        self.log("\n[+] Checking HTTP(S) Headers...\n")
         if not self.checkPort(443):
-            self.log("  - Port 443 is CLOSED. Skipping HTTPS Headers Check.")
-            return
-        try:
-            connection = http.client.HTTPSConnection(self.domain)
-            connection.request("GET", "/")
-            response = connection.getresponse()
-            headers = response.getheaders()
-            connection.close()
-            for header, value in headers:
-                self.log(f"  - {header}: {value}")
-        except Exception as e:
-            self.log(f"  - HTTP Headers Check Failed: {e}")
+            try:
+                connection = http.client.HTTPConnection(self.domain)
+                connection.request("GET", "/")
+                response = connection.getresponse()
+                headers = response.getheaders()
+                connection.close()
+                for header, value in headers:
+                    self.log(f"  - {header}: {value}")
+            except Exception as e:
+                self.log(f"  - HTTP Headers Check Failed: {e}")
+        else:
+            try:
+                connection = http.client.HTTPSConnection(self.domain)
+                connection.request("GET", "/")
+                response = connection.getresponse()
+                headers = response.getheaders()
+                connection.close()
+                for header, value in headers:
+                    self.log(f"  - {header}: {value}")
+            except Exception as e:
+                self.log(f"  - HTTPS Headers Check Failed: {e}")
     
     def checkXSS(self):
         self.log("\n[+] Checking for Cross-site Scripting Vulnerabilities...\n")
@@ -216,17 +229,21 @@ class DomainScanner:
             "learn", "promo", "store", "engage", "quote", "landing", "services", "hello", "try", "trial", "demo", 
             "sales", "m", "ftp", "wiki", "webmail", "kb", "help", "stage", "app",
         ]
+        enumr = False
         for subdomain in subdomains:
             domainFull = f"{subdomain}.{self.domain}"
             try:
                 socket.setdefaulttimeout(3) 
                 IPAddress = socket.gethostbyname(domainFull)
                 self.log(f"  - Subdomain Found: {domainFull} -> {IPAddress}")
+                enumr = True
             except (socket.gaierror, socket.timeout, socket.error) as e:
-                print(f"  - DNS Enumeration Failed for {domainFull}: {e}")
                 continue
             except Exception as e:
                 self.log(f"  - DNS Enumeration Failed for {domainFull}: {e}")
+            if enumr == False:
+                print("  - No Common Subdomains Detected.")
+
 
     def checkDirectories(self):
         self.log("\n[+] Checking for Directory Traversal Vulnerabilities...\n")
@@ -237,6 +254,7 @@ class DomainScanner:
         patterns = [
             "root:", "passwd", "windows", "system32", "etc/shadow", "boot.ini",
         ]
+        directory = False
         for payload in payloads:
             try:
                 payloadEncoded = urllib.parse.quote(payload)
@@ -250,10 +268,14 @@ class DomainScanner:
                         self.log("  - Potential Directory Traversal Found!")
                         self.log(f"    Payload: {payload}")
                         self.log(f"    Pattern: {payload}")
+                        directory = True
                 if response.status in [200, 403, 500]:
                     self.log(f"  - Suspicious Response for Payload: {payload} (Status Code {response.status})")
+                    directory = True
             except Exception as e:
                 self.log(f"  - Directory Traversal Test Failed for Payload {payload}: {e}")
+        if directory == False:
+            print("  - No Obvious Directory Traversal Vulnerabilities Detected.")
 
     def runScan(self):
         self.portScanning()
