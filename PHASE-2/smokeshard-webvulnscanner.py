@@ -127,12 +127,12 @@ class DomainScanner:
                     content = response.read().decode(errors="ignore")
                     connection.close()
                     if payload in content or payloadEncoded in content:
-                        self.log(f"  - Potential XSS (Reflected) Found!")
+                        self.log("  - Potential XSS (Reflected) Found!")
                         self.log(f"    Path: {path}")
                         self.log(f"    Method: {method}")
                         self.log(f"    Payload: {payload}")
                     if "alert" not in content and "XSS" in content:
-                        self.log(f"  - Potential Filter Bypass Found!")
+                        self.log("  - Potential Filter Bypass Found!")
                         self.log(f"    Path: {path}")
                         self.log(f"    Method: {method}")
                         self.log(f"    Payload: {payload}")
@@ -147,7 +147,7 @@ class DomainScanner:
                     self.log(f"    Method: {method}")
 
     def checkCSRF(self):
-        self.log(f"\n[+] Checking for Basic Cross-Site Request Forgery...\n")
+        self.log("\n[+] Checking for Basic Cross-Site Request Forgery...\n")
         try:
             connection = http.client.HTTPConnection(self.domain)
             connection.request("GET", "/")
@@ -222,7 +222,7 @@ class DomainScanner:
                 socket.setdefaulttimeout(3) 
                 IPAddress = socket.gethostbyname(domainFull)
                 self.log(f"  - Subdomain Found: {domainFull} -> {IPAddress}")
-            except (socket.gaierror, socket.timeout, socket.error):
+            except (socket.gaierror, socket.timeout, socket.error) as e:
                 print(f"  - DNS Enumeration Failed for {domainFull}: {e}")
                 continue
             except Exception as e:
@@ -247,7 +247,7 @@ class DomainScanner:
                 connection.close()
                 for pattern in patterns:
                     if pattern in content:
-                        self.log(f"  - Potential Directory Traversal Found!")
+                        self.log("  - Potential Directory Traversal Found!")
                         self.log(f"    Payload: {payload}")
                         self.log(f"    Pattern: {payload}")
                 if response.status in [200, 403, 500]:
