@@ -1,7 +1,9 @@
-# Domain Vulnerability Scanner
+# Domain Vulnerability Scanner v2.25
 # Author: @smokeshard on Discord
 # ======================================================================================================================
 
+import os
+import platform
 import datetime
 import http.client
 import re
@@ -11,284 +13,531 @@ import urllib.parse
 import base64
 
 class DomainScanner:
-    def log(self, message):
+
+    # Prepare and sanitise the provided domain as a precaution against most errors and create or update log file.
+    
+    def __init__ (self, domain):
+        if platform.system() == "Linux":
+            os.system("clear")
+        elif platform.system() == "Windows":
+            os.system("cls")
+        print("=====\n")
+        print(" __                        __         __     __    __                         __     ")
+        print("/\ \_                     /\ \      /'__`\  /\ \_ /\ \                       /\ \    ")
+        print("\/'__`\    ___ ___     ___\ \ \/'\ /\_\L\ \ \/'__`\ \ \___      __     _ __  \_\ \   ")
+        print("/\ \_\_\ /' __` __`\  / __`\ \ , < \/_/_\_<_/\ \_\_\ \  _ `\  /'__`\  /\`'__\/'_` \  ")
+        print("\ \____ \/\ \/\ \/\ \/\ \L\ \ \ \\\\`\ /\ \L\ \ \____ \ \ \ \ \/\ \L\.\_\ \ \//\ \L\ \\")
+        print(" \/\ \_\ \ \_\ \_\ \_\ \____/\ \_\ \_\ \____/\/\ \_\ \ \_\ \_\ \__/.\_\\\\ \_\\\\ \___,_\\")
+        print("  \ `\_ _/\/_/\/_/\/_/\/___/  \/_/\/_/\/___/  \ `\_ _/\/_/\/_/\/__/\/_/ \/_/ \/__,_ /")
+        print("   `\_/\_\                                     `\_/\_\                               ")
+        print("      \/_/                                        \/_/                               ")
+        print("\n")
+        domain = re.sub(r'https?://|:[0-9]+', '', domain.lower()).split('/')[0]
+        self.domain = domain
+        self.scanResult = f"Scan Results for {re.sub(r'[^a-zA-Z0-9-]', '.', domain)}.txt"
+        self.LogMessage(f"=====\n\nScan for '{domain}' Started at {datetime.datetime.now()}\n\n=====")
+
+    # Create messages in new or existing log file.
+    
+    def LogMessage(self, message):
         with open(self.scanResult, "a") as log:
             log.write(message + "\n")
         print(message)
 
-    def checkPort (self, port):
-        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-            try:
-                sock.settimeout(2)
-                return sock.connect_ex((self.domain, port)) == 0
-            except Exception as e:
-                self.log(f"  - Port {port} Scan Failed: {e}")
+    # Check specific port for specific
 
-    def __init__ (self, domain):
-        domain = domain.lower()
-        domain = re.sub(r'https?://', '', domain)
-        domain = domain.split('/')[0]
-        domain = domain.split(':')[0]
-        self.domain = domain
-        domainSanitised = re.sub(r'[^a-zA-Z0-9-]', '_', domain)
-        self.scanResult = f"Scan Results for {domainSanitised}.txt"
-        self.log(f"Scan for '{domain}' Started at {datetime.datetime.now()}\n\n=====")
-
-    def portScanning(self):
-        self.log("\n[+] Performing Port Scan...\n")
-        ports = [
-            1000, 10000, 10001, 1001, 10011, 10101, 1080, 1099, 110, 11011, 1111, 11211, 119, 1194, 123, 123, 1234,
-            12345, 12543, 12931, 1337, 143, 1433, 1434, 15000, 1521, 1555, 161, 162, 177, 18000, 194, 20, 2000, 20000,
-            20002, 2005, 2020, 2048, 20480, 20481, 20490, 21, 2101, 2121, 21345, 22, 2222, 23, 2323, 2345, 25, 25000,
-            2545, 2546, 27017, 27018, 28017, 3000, 30000, 303, 3030, 30303, 30304, 3060, 3128, 31337, 3306, 33333, 3389,
-            3434, 34343, 3600, 3690, 4000, 40000, 4011, 4020, 4040, 4200, 4242, 4321, 443, 4433, 4443, 4444, 44444, 445,
-            45000, 45010, 4554, 4848, 500, 5000, 5050, 50500, 50505, 5060, 5101, 5150, 520, 53, 5335, 5353, 5432, 54321,
-            5522, 5555, 55555, 5632, 5858, 587, 5900, 5985, 5986, 6000, 60000, 631, 6379, 65430, 65431, 65432, 6660,
-            6661, 6662, 6663, 6664, 6665, 6666, 6667, 6668, 6669, 6670, 6680, 6697, 6699, 67, 6789, 68, 69, 7000, 7070,
-            7171, 7777, 7778, 7800, 80, 8000, 8080, 8088, 8443, 8888, 9000, 9001, 9035, 9080, 9090, 9876, 993, 995, 999,
-            9999,
-            ]
-        for port in ports:
-            with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
-                try:
-                    sock.settimeout(2)
-                    result = sock.connect_ex((self.domain, port))
-                    if result == 0:
-                        self.log(f"  - Port {port} is OPEN")
-                    else:
-                        print(f"  - Port {port} is CLOSED")
-                except Exception as e:
-                    self.log(f"  - Port {port} Scan Failed: {e}")
-                    
-
-    def checkSSL(self):
-        self.log("\n[+] Checking SSL Certificate...\n")
-        if not self.checkPort(443):
-            self.log("  - Port 443 is CLOSED. Skipping SSL Check.")
-            return
+    def Port (self, port):
         try:
-            ctx = ssl.create_default_context()
-            with ctx.wrap_socket(socket.socket(), server_hostname=self.domain) as sock:
-                sock.connect((self.domain, 443))
-                cert = sock.getpeercert()
-                expiry = cert['notAfter']
-                self.log(f"  - SSL Certificate Valid Until: {expiry}")
-        except Exception as e:
-            self.log(f"  - SSL Check Failed: {e}")
-    
-    def checkHTTPHeaders(self):
-        self.log("\n[+] Checking HTTP(S) Headers...\n")
-        if not self.checkPort(443):
+            address = socket.gethostbyname(self.domain)
+            with socket.create_connection((address, port), timeout=2):
+                return True
+        except (socket.timeout, ConnectionRefusedError, socket.gaierror):
+            return False
+
+    # Check for open ports according to dictionary; update as necessary.
+
+    def PortScan(self):
+        services = {
+            20: 'FTP (Data)', 
+            21: 'FTP (Control)', 
+            22: 'SSH', 
+            23: 'Telnet', 
+            25: 'SMTP', 
+            53: 'DNS', 
+            67: 'DHCP', 
+            68: 'DHCP', 
+            80: 'HTTP', 
+            110: 'POP3', 
+            119: 'NNTP', 
+            123: 'NTP', 
+            143: 'IMAP', 
+            161: 'SNMP', 
+            162: 'SNMP Trap', 
+            194: 'IRC', 
+            443: 'HTTPS', 
+            445: 'SMB', 
+            500: 'ISAKMP', 
+            587: 'SMTP (Submission)', 
+            993: 'IMAPS', 
+            995: 'POP3S', 
+            1080: 'SOCKS Proxy', 
+            1433: 'MSSQL', 
+            1434: 'MSSQL Browser', 
+            1521: 'Oracle', 
+            3306: 'MySQL', 
+            3389: 'RDP', 
+            5432: 'PostgreSQL', 
+            5900: 'VNC', 
+            6379: 'Redis', 
+            8080: 'HTTP Proxy', 
+            3000: 'Ruby on Rails', 
+            3128: 'Squid Proxy', 
+            4848: 'GlassFish', 
+            5000: 'Flask Default', 
+            5985: 'WinRM', 
+            5986: 'WinRM SSL', 
+            6660: 'IRC', 
+            6661: 'IRC', 
+            6662: 'IRC', 
+            6663: 'IRC', 
+            6664: 'IRC', 
+            6665: 'IRC', 
+            6666: 'IRC', 
+            6667: 'IRC', 
+            6668: 'IRC', 
+            6669: 'IRC', 
+            6670: 'IRC', 
+            7000: 'Alternate HTTP', 
+            7070: 'WebSocket', 
+            8000: 'HTTP Alt', 
+            8088: 'HTTP Alt', 
+            8443: 'HTTPS Alt', 
+            9000: 'PHP-FPM', 
+            9090: 'Prometheus', 
+            27017: 'MongoDB', 
+            27018: 'MongoDB', 
+            28017: 'MongoDB Web Admin',
+        }
+        ports = list(services.keys())
+        vulnerable = False
+        self.LogMessage("\n[+] Performing Port Scan...\n")
+        address = socket.gethostbyname(self.domain)
+        for port in ports:
             try:
-                connection = http.client.HTTPConnection(self.domain)
-                connection.request("GET", "/")
-                response = connection.getresponse()
-                headers = response.getheaders()
-                connection.close()
-                for header, value in headers:
-                    self.log(f"  - {header}: {value}")
-            except Exception as e:
-                self.log(f"  - HTTP Headers Check Failed: {e}")
-        else:
-            try:
-                connection = http.client.HTTPSConnection(self.domain)
-                connection.request("GET", "/")
-                response = connection.getresponse()
-                headers = response.getheaders()
-                connection.close()
-                for header, value in headers:
-                    self.log(f"  - {header}: {value}")
-            except Exception as e:
-                self.log(f"  - HTTPS Headers Check Failed: {e}")
-    
-    def checkXSS(self):
-        self.log("\n[+] Checking for Cross-site Scripting Vulnerabilities...\n")
-        payloads = [
-            "<script>alert('XSS')</script>", "<img src=x onerror=alert('XSS')>", "<svg onload=alert('XSS')>",
-            "javascript:alert('XSS')", base64.b64encode("<script>alert('XSS')</script>".encode()).decode(),
-            "<ScRiPt>alert('XSS')</ScRiPt>", "<SCRIPT>alert('XSS');</SCRIPT>", 
-            "<scr<script>ipt>alert('XSS')</scr</script>ipt>", "' onmouseover='alert('XSS')",
-            "\" onmouseover=\"alert('XSS')", "' onfocus='alert('XSS')", "\"><iframe src=\"javascript:alert('XSS')\">",
-            "\"><video><source onerror=\"alert('XSS')\">", "';alert('XSS')//", "\";alert('XSS')//",
-            "><script>alert(String.fromCharCode(88,83,83))</script>",
+                with socket.create_connection((address, port), timeout=2):
+                    service = services.get(port, 'Unknown')
+                    self.LogMessage(f"  - Port {port} is OPEN (Service: {service})")
+                    vulnerable = True
+            except (socket.timeout, ConnectionRefusedError, socket.gaierror):
+                pass
+        if not vulnerable:
+                    self.LogMessage("  - No Open Ports Detected.")
+
+    # Check for any common subdomains for provided domain according to dictionary; update as necessary.
+
+    def DNSEnumeration(self):
+        stripped = self.domain.split('.')[-2:]
+        stripped = '.'.join(stripped)
+        subdomains = [
+            "admin",
+            "alt",
+            "api",
+            "app",
+            "aspmx",
+            "backup",
+            "blog",
+            "cdn",
+            "cms",
+            "demo",
+            "dev",
+            "engage",
+            "ftp",
+            "hello",
+            "help",
+            "imap",
+            "inbound",
+            "kb",
+            "landing",
+            "learn",
+            "m",
+            "mail",
+            "meet",
+            "mx",
+            "mxb",
+            "pop",
+            "pop3",
+            "portal",
+            "promo",
+            "quote",
+            "rest",
+            "sales",
+            "services",
+            "shop",
+            "smtp",
+            "stage",
+            "staging",
+            "store",
+            "support",
+            "team",
+            "test",
+            "trial",
+            "try",
+            "testasp",
+            "testaspnet",
+            "testhtml5",
+            "testphp",
+            "webmail",
+            "wiki",
+            "www",
         ]
-        contexts = [
-            ("/?q={}", "GET"),
-            ("/search?query={}", "GET"),
-            ("/login?username={}&password=test", "POST"),
-            ("/comment?text={}", "POST")
+        vulnerable = []
+        self.LogMessage("\n[+] Performing DNS Enumeration...\n")
+        try:
+            MainIPAddress = socket.gethostbyname(self.domain)
+            for iteration in subdomains:
+                subdomain = f"{iteration}.{self.domain}"
+                try:
+                    SubIPAddress = socket.gethostbyname(subdomain)
+                    if SubIPAddress != MainIPAddress:
+                        vulnerable.append(subdomain)
+                        self.LogMessage(f"  - Subdomain Detected: {subdomain} ({SubIPAddress})")
+                except (socket.gaierror, socket.timeout):
+                    pass
+        except socket.gaierror as exception:
+            self.LogMessage(f"  ! DNS Enumeration Failed: {exception}")
+        if not vulnerable:
+            self.LogMessage("  - No Common Subdomains Detected.")
+
+    # Check for any directory traversal vulnerabilites according to dictionary; update as necessary.
+
+    def DirectoryTraversal(self):
+        insertions = [
+            "/admin/config?path={}",
+            "/assets/{}",
+            "/display?doc={}",
+            "/download?file={}",
+            "/fetch?url={}",
+            "/file?path={}",
+            "/get?resource={}",
+            "/image?src={}",
+            "/include?file={}",
+            "/load?document={}",
+            "/media/{}",
+            "/read?page={}",
+            "/render?template={}",
+            "/showimage.php?file={}",
+            "/static/{}",
+            "/upload?name={}",
+            "/view?doc={}",
+        ]
+        payloads = [
+            "C:\\Windows\\system32\\config\\SAM",
+            "%2e%2e%2f",
+            "%2e%2e%2f",
+            "%2e%2e%2f%2e%2e%2f",
+            "%2e%2e/",
+            "%252e%252e%252f",
+            "..%2f",
+            "..%2f..%2f",
+            "..%252f",
+            "..%c0%af",
+            "..../",
+            "....//",
+            "....//....//",
+            ".../",
+            "../" "..%2f",
+            "../",
+            "../../",
+            "../../../",
+            "../../../../",
+            "..//",
+            "..//////",
+            "..\\", "..\\..\\",
+            "..\\../",
+            "..\\../",
+            "..\\\\../",
+            "..\\\\\\\\../",
+            "/etc/hosts",
+            "/etc/passwd",
+            "/etc/shadow",
         ]
         patterns = [
-            "customAlert", "sanitize", "escapeHTML", "innerHTML", "document.write",
+            "administrator",
+            "bash",
+            "boot.ini",
+            "cmd",
+            "computername",
+            "configuration",
+            "config",
+            "connection string",
+            "connection_string",
+            "credential",
+            "database",
+            "db_pass"
+            "db_user",
+            "debug",
+            "domain",
+            "email",
+            "environment",
+            "env",
+            "etc/shadow",
+            "hostname",
+            "machine_name",
+            "mongodb",
+            "mssql",
+            "mysql",
+            "oracle",
+            "passwd",
+            "password",
+            "perl",
+            "php",
+            "postgres",
+            "python",
+            "root:",
+            "ruby",
+            "secret",
+            "server_config",
+            "settings",
+            "shell",
+            "sqlite",
+            "system32",
+            "system_type",
+            "token",
+            "userid",
+            "username",
+            "user_id",
+            "windows",
+            "zsh",
         ]
-        headers = { 
-            "User-Agent": "Mozilla/5.0", "Content-Type": "application/x-www-form-urlencoded",
-            "X-Requested-With": "XMLHttpRequest",
-        }
+        vulnerable = False
+        self.LogMessage("\n[+] Checking for Directory Traversal...\n")
+        for insertion in insertions:
+            for payload in payloads:
+                try:
+                    encoded = urllib.parse.quote(payload)
+                    connection = http.client.HTTPConnection(self.domain, timeout=3)
+                    connection.request("GET", insertion.format(encoded))
+                    response = connection.getresponse()
+                    content = response.read().decode(errors="ignore").lower()
+                    connection.close()
+                    if any(pattern in content for pattern in patterns):
+                        self.LogMessage(f"  - Potential Traversal: '{payload}'!")
+                        vulnerable = True
+                except Exception:
+                    pass
+        if not vulnerable:
+            self.LogMessage("  - No Obvious Directory Traversal Vulnerabilty Detected.")
+
+    # Check for existence of SSL certificate; skip if HTTPS port 443 is closed.
+
+    def SSLCertificate(self):
+        if not self.Port(443):
+            self.LogMessage("\n[+] Checking SSL Certificate...\n\n  - Port 443 CLOSED. Skipping.")
+            return
+        vulnerable = True
+        self.LogMessage("\n[+] Checking SSL Certificate...\n")
+        try:
+            context = ssl.create_default_context()
+            with context.wrap_socket(socket.socket(), server_hostname=self.domain) as sock:
+                sock.connect((self.domain, 443))
+                cert = sock.getpeercert()
+                self.LogMessage(f"  - SSL Certificate Valid Until: {cert['notAfter']}.")
+                vulnerable = False
+        except Exception as exception:
+            self.LogMessage(f"  ! SSL Check Failed: {exception}")
+        if vulnerable:
+            self.LogMessage("  - No SSL Certificate Detected!")
+    
+    # Check HTTP(S) headers for security policies according to dictionary; update as necessary.
+
+    def HTTPHeaders(self):
+        security = [
+            "Content-Security-Policy",
+            "Strict-Transport-Security",
+            "X-Frame-Options",
+            "X-XSS-Protection",
+        ]
+        headers = {}
+        self.LogMessage("\n[+] Checking Security Headers...\n")
+        if not self.Port(443):
+            try:
+                connection = http.client.HTTPConnection(self.domain, timeout=3)
+                connection.request("GET", "/")
+                response = connection.getresponse()
+                headers = dict(response.getheaders())
+                connection.close()
+            except Exception as exception:
+                self.LogMessage(f"  ! Headers Check Failed: {exception}")
+        else:
+            try:
+                connection = http.client.HTTPSConnection(self.domain, timeout=3)
+                connection.request("GET", "/")
+                response = connection.getresponse()
+                headers = dict(response.getheaders())
+                connection.close()
+            except Exception as exception:
+                self.LogMessage(f"  ! Headers Check Failed: {exception}")
+        for header in security:
+            if header in headers:
+                self.LogMessage(f"  - {header}: {headers[header]}")
+
+    # Check for potential basic cross-site scripting according to dictionary; update as necessary.
+
+    def CrossSiteScripting(self):
+        payloads = [
+            base64.b64encode("<script>alert('XSS')</script>".encode()).decode(),
+            "javascript:alert('XSS')",
+            "' onfocus='alert('XSS')",
+            "' onmouseover='alert('XSS')",
+            "';alert('XSS')//", "\";alert('XSS')//",
+            "<img src=x onerror=alert('XSS')>",
+            "<SCRIPT>alert('XSS');</SCRIPT>",
+            "<ScRiPt>alert('XSS')</ScRiPt>",
+            "<script>alert('XSS')</script>",
+            "<scr<script>ipt>alert('XSS')</scr</script>ipt>",
+            "<svg onload=alert('XSS')>",
+            "><script>alert(String.fromCharCode(88,83,83))</script>",
+            "\" onmouseover=\"alert('XSS')",
+            "\"><iframe src=\"javascript:alert('XSS')\">",
+            "\"><video><source onerror=\"alert('XSS')\">",
+        ]
+        contexts = [
+            ("/comment?text={}", "POST"),
+            ("/login?username={}&password=test", "POST"),
+            ("/search?query={}", "GET"),
+            ("/?q={}", "GET"),
+        ]
+        patterns = [
+            "customAlert",
+            "document.write",
+            "escapeHTML",
+            "innerHTML",
+            "sanitize",
+        ]
+        vulnerable = False
+        self.LogMessage("\n[+] Checking for Cross-Site Scripting...\n")
         for payload in payloads:
             for template, method in contexts:
                 try:
-                    payloadEncoded = urllib.parse.quote(payload)
-                    path = template.format(payloadEncoded)
-                    connection = http.client.HTTPConnection(self.domain)
-                    if method == "GET":
-                        connection.request(method, path, headers=headers)
-                    else:
-                        body = f"data={payloadEncoded}"
-                        connection.request(method, path, body=body, headers=headers)
+                    encoded = urllib.parse.quote(payload)
+                    path = template.format(encoded)
+                    connection = http.client.HTTPConnection(self.domain, timeout=3)
+                    connection.request(method, path)
                     response = connection.getresponse()
                     content = response.read().decode(errors="ignore")
                     connection.close()
-                    if payload in content or payloadEncoded in content:
-                        self.log("  - Potential XSS (Reflected) Found!")
-                        self.log(f"    Path: {path}")
-                        self.log(f"    Method: {method}")
-                        self.log(f"    Payload: {payload}")
-                    if "alert" not in content and "XSS" in content:
-                        self.log("  - Potential Filter Bypass Found!")
-                        self.log(f"    Path: {path}")
-                        self.log(f"    Method: {method}")
-                        self.log(f"    Payload: {payload}")
+                    if payload in content:
+                        self.LogMessage(f"  - Potential Reflected XSS: '{payload}'!")
+                        vulnerable = True
                     for pattern in patterns:
                         if pattern in content:
-                            self.log(f"  - Suspicious Pattern Found: {pattern}")
-                            self.log(f"    Path: {path}")
-                            self.log(f"    Method: {method}")
-                except Exception as e:
-                    self.log(f"  - XSS Test Failed: {e}")
-                    self.log(f"    Path: {path}")
-                    self.log(f"    Method: {method}")
+                            self.LogMessage(f"  - XSS Filter Detected: '{pattern}'")
+                except (socket.gaierror, ConnectionRefusedError):
+                    continue
+                except Exception as exception:
+                    self.LogMessage(f"  ! XSS Test Failed: {exception}")
+        if not vulnerable:
+            self.LogMessage("  - No Obvious Cross-Site Scripting Vulnerabilities Detected.")
 
-    def checkCSRF(self):
-        self.log("\n[+] Checking for Basic Cross-Site Request Forgery...\n")
+    # Check for protections regarding cross-site request forgery according to dictionary; update as necessary.
+
+    def CrossSiteRequestForgery(self):
+        tokens = [
+            "CSRF-Token",
+            "csrf_token",
+            "X-CSRF-Token",
+            "X-XSRF-Token",
+        ]
+        patterns = [
+            r'<input[^>]*name=["\']csrf[^"\']*["\']',
+            r'<meta[^>]*name=["\']csrf-token["\']',
+        ]
+        vulnerable = True
+        self.LogMessage("\n[+] Checking for CSRF Protection...\n")
         try:
-            connection = http.client.HTTPConnection(self.domain)
+            connection = http.client.HTTPConnection(self.domain, timeout=3)
             connection.request("GET", "/")
             response = connection.getresponse()
-            headers = response.getheaders()
-            connection.close()
+            headers = dict(response.getheaders())
             content = response.read().decode(errors="ignore")
-            CSRFHeaders = ["X-CSRF-Token", "CSRF-Token", "X-XSRF-Token",]
-            CSRFPatterns = [
-                r'<input[^>]*type=["\']hidden["\'][^>]*name=["\']csrf[^"\']*["\']',
-                r'<input[^>]*name=["\']csrf[^"\']*["\'][^>]*type=["\']hidden["\']', 
-                r'<meta[^>]*name=["\']csrf-token["\']',
-            ]
-            for header in CSRFHeaders:
-                if header in headers:
-                    csrf = True
-                    self.log(f"  - Found CSRF Protection Header: {header}")
-                else:
-                    csrf = False
-            for pattern in CSRFPatterns:
+            connection.close()
+            for token in tokens:
+                if token in headers:
+                    vulnerable = False
+                    break
+            for pattern in patterns:
                 if re.search(pattern, content, re.IGNORECASE):
-                    csrf = True
-                    self.log("  - Found CSRF Token in Form")
-                else:
-                    csrf = False
-            if csrf == False:
-                self.log("  - No CSRF Protection Detected!")
-        except Exception as e:
-            self.log(f"  - CSRF Check Failed: {e}")
+                    vulnerable = False
+                    break
+            if not vulnerable:
+                self.LogMessage("  - CSRF Protection Detected!")
+            else:
+                self.LogMessage("  - No CSRF Protection Detected!")
+        except Exception as exception:
+            self.LogMessage(f"  ! CSRF Check Failed: {exception}")
 
-    def checkSQLInjection(self):
-        self.log("\n[+] Checking for Basic SQL Injection Vulnerabilities...\n")
+    # Check for basic SQL injection techniques according to dictionary; update as necessary.
+
+    def SQLInjection(self):
         payloads = [
-            "' OR '1'='1", "1' OR '1'='1", "1 OR 1=1", "' --", "1' --", "' UNION SELECT NULL--", "admin' --",
+            "1 OR 1=1",
+            "1' OR '1'='1",
+            "admin' --",
+            "' OR '1'='1",
+            "' UNION SELECT NULL--",
+            "' --", "1' --",
         ]
         patterns = [
-            "sql", "mysql", "oracle", "syntax error", "postgresql", "sqlite", "database error",
-            ]
+            "database error",
+            "mysql",
+            "oracle",
+            "postgresql",
+            "sqlite",
+            "sql",
+            "syntax error",
+        ]
+        vulnerable = False
+        self.LogMessage("\n[+] Checking for SQL Injection...\n")
         for payload in payloads:
             try:
-                sql = False
-                payloadEncoded = urllib.parse.quote(payload)
-                connection = http.client.HTTPConnection(self.domain)
-                connection.request("GET", f"/?id={payloadEncoded}")
+                encoded = urllib.parse.quote(payload)
+                connection = http.client.HTTPConnection(self.domain, timeout=3)
+                connection.request("GET", f"/?id={encoded}")
                 response = connection.getresponse()
                 content = response.read().decode(errors="ignore").lower()
                 connection.close()
                 for pattern in patterns:
                     if pattern in content:
-                        self.log(f"  - Potential SQL Injection Found with Payload: {payload}")
-                        self.log(f"    Database Error Pattern: {pattern}")
-                        sql = True
+                        self.LogMessage(f"  - Potential SQL Injection: {payload}!")
+                        vulnerable = True
+                        break
                 if response.status == 500:
-                    self.log(f"  - Potential SQL Injection Found! Server Error with Payload: {payload}")
-                    sql = True
-            except Exception as e:
-                self.log(f"  - SQL Injection Test Failed for Payload {payload}: {e}")
-        if sql == False:
-            self.log("  - No Obvious SQL Injection Vulnerabilities Detected.")
-
-    def checkDNSEnumeration(self):
-        self.log("\n[+] Performing DNS Enumeration...\n")
-        subdomains = [
-            "www", "mail", "smtp", "imap", "pop3", "pop", "mxb", "aspmx", "mx", "alt", "inbound", "admin", "blog", 
-            "dev", "test", "staging", "backup", "api", "portal", "cms", "support", "cdn", "shop", "meet", "team", 
-            "learn", "promo", "store", "engage", "quote", "landing", "services", "hello", "try", "trial", "demo", 
-            "sales", "m", "ftp", "wiki", "webmail", "kb", "help", "stage", "app",
-        ]
-        enumr = False
-        for subdomain in subdomains:
-            domainFull = f"{subdomain}.{self.domain}"
-            try:
-                socket.setdefaulttimeout(3) 
-                IPAddress = socket.gethostbyname(domainFull)
-                self.log(f"  - Subdomain Found: {domainFull} -> {IPAddress}")
-                enumr = True
-            except (socket.gaierror, socket.timeout, socket.error) as e:
+                    self.LogMessage(f"  - Potential SQL Injection: Server Error with {payload}!")
+                    vulnerable = True
+            except (socket.gaierror, ConnectionRefusedError):
                 continue
-            except Exception as e:
-                self.log(f"  - DNS Enumeration Failed for {domainFull}: {e}")
-            if enumr == False:
-                print("  - No Common Subdomains Detected.")
+            except Exception as exception:
+                self.LogMessage(f"  ! SQL Injection Test Failed: {exception}")
+        if not vulnerable:
+            self.LogMessage("  - No Obvious SQL Injection Vulnerabilities Detected.")
 
+    # Runs the actual scan; comment out methods as necessary.
 
-    def checkDirectories(self):
-        self.log("\n[+] Checking for Directory Traversal Vulnerabilities...\n")
-        payloads = [
-            "../", "../../", "../../../", "../../../../", ".../", "%2e%2e%2f", "../" "..%2f", "..%252f", 
-            "..%c0%af", "..\\", "..\\..\\", "/etc/passwd", "C:\\Windows\\system32\\config\\SAM",
+    def Scan(self):
+        methods = [
+            self.PortScan,
+            self.DNSEnumeration,
+            self.DirectoryTraversal,
+            self.SSLCertificate,
+            self.CrossSiteScripting,
+            self.CrossSiteRequestForgery,
+            self.SQLInjection,
         ]
-        patterns = [
-            "root:", "passwd", "windows", "system32", "etc/shadow", "boot.ini",
-        ]
-        directory = False
-        for payload in payloads:
-            try:
-                payloadEncoded = urllib.parse.quote(payload)
-                connection = http.client.HTTPConnection(self.domain)
-                connection.request("GET", f"/download?file={payloadEncoded}")
-                response = connection.getresponse()
-                content = response.read().decode(errors="ignore").lower()
-                connection.close()
-                for pattern in patterns:
-                    if pattern in content:
-                        self.log("  - Potential Directory Traversal Found!")
-                        self.log(f"    Payload: {payload}")
-                        self.log(f"    Pattern: {payload}")
-                        directory = True
-                if response.status in [200, 403, 500]:
-                    self.log(f"  - Suspicious Response for Payload: {payload} (Status Code {response.status})")
-                    directory = True
-            except Exception as e:
-                self.log(f"  - Directory Traversal Test Failed for Payload {payload}: {e}")
-        if directory == False:
-            print("  - No Obvious Directory Traversal Vulnerabilities Detected.")
-
-    def runScan(self):
-        self.portScanning()
-        self.checkDNSEnumeration()
-        self.checkDirectories()
-        self.checkSSL()
-        self.checkHTTPHeaders()
-        self.checkXSS()
-        self.checkCSRF()
-        self.checkSQLInjection()
-        self.log(f"\n=====\n\nScanning Completed at {datetime.datetime.now()}")
+        for method in methods:
+            method()
+        self.LogMessage(f"\n=====\n\nScanning Completed at {datetime.datetime.now()}\n\n")
 
 if __name__ == "__main__":
     domain = input("\nEnter Domain to Scan: ")
     scanner = DomainScanner(domain)
-    scanner.runScan()
+    scanner.Scan()
