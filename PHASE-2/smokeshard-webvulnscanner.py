@@ -535,7 +535,7 @@ class DomainScanner:
         ]
         for method in methods:
             method()
-        self.LogMessage(f"\n=====\n\nScanning Completed at {datetime.datetime.now()}\n\n")
+        self.LogMessage(f"\n=====\n\nScanning Completed at {datetime.datetime.now()}\n")
 
 if __name__ == "__main__":
     domain = input("\nEnter Domain to Scan: ")
