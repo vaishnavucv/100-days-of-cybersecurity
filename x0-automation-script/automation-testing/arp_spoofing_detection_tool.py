@@ -4,7 +4,7 @@ import re
 import requests
 
 # Configuration
-WEBHOOK_URL = "https://discord.com/api/webhooks/1346845718274642001/owZkZfJ61QF5DZVfNqSm4oZqUqSCZIqRpKGO3zshYwKhr10F2rghcjbXFCVF_R734wRM"  # Replace with your actual webhook URL
+WEBHOOK_URL = "webhook_url"  # Replace with your actual webhook URL
 SUBNET_PREFIX = "192.168.1."
 GATEWAY_IP = "192.168.1.1"  # IP to compare for spoofing checks
 SCAN_INTERVAL = 60          # Seconds between scans
