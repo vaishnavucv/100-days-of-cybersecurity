@@ -25,7 +25,7 @@ _____/  .__/ \___/ \___/ _| _____/ _| |_|_|\___|_|\__,_|
 ## 📥 Installation
 1️⃣ Clone the repo:
    ```bash
-   git clone https://github.com/c1ph3r1337/spoofshield.git
+   git clone https://github.com/c1ph3r1337/spoofshield.git](https://github.com/c1ph3r-1337/100-days-of-cybersecurity/tree/main/x0-automation-script/scanning-tools/SpoofShield
    cd spoofshield
    ```
 2️⃣ Install dependencies:
@@ -40,17 +40,17 @@ Edit the script to set up your **Discord webhook & network settings**:
 🔹 **SUBNET_PREFIX** → Set the subnet to **monitor** (default: `192.168.130.`) 🌍  
 🔹 **SCAN_INTERVAL** → Adjust scanning frequency (default: `60` seconds) ⏰  
 
-Example config inside `spoofshield.py`:
+Example config inside `main.py`:
 ```python
 WEBHOOK_URL = "your_discord_webhook_url"
-SUBNET_PREFIX = "192.168.130."
+SUBNET_PREFIX = "192.168.130." 
 SCAN_INTERVAL = 60  # Seconds between scans
 ```
 
 ## 🚀 Usage
 Run **SpoofShield** like a pro:
 ```bash
-python spoofshield.py
+python main.py
 ```
 It will **continuously monitor** your ARP table and send 🔔 **alerts** if it detects spoofing! 👀
 
