@@ -1,37 +1,39 @@
-# ARP Spoofing Detection Tool
+# 🚨 SpoofShield - ARP Spoofing Detection Tool 🔥
 
-## Overview
-This tool monitors the local network for ARP spoofing attacks by analyzing the ARP table and checking if multiple IP addresses share the same MAC address as the gateway. If suspicious activity is detected, it sends an alert to a Discord webhook.
+## 🛡️ Overview
+**SpoofShield** is a powerful ARP spoofing detection tool that keeps your network safe from MITM (Man-in-the-Middle) attacks. It scans your network, detects ARP anomalies, and alerts you on **Discord** when it finds something shady! 🕵️‍♂️
 
-## Features
-- Periodically scans the ARP table for anomalies.
-- Detects ARP spoofing attacks by checking for duplicate MAC addresses.
-- Sends alerts to a Discord webhook when spoofing is detected.
-- Supports both Windows and Linux/macOS ARP table formats.
+## ⚡ Features
+✅ Real-time ARP table scanning 🔄  
+✅ Detects ARP spoofing attacks 🕶️  
+✅ Sends instant alerts to **Discord** 🚀  
+✅ Works on **Windows & Linux/macOS** 🖥️  
+✅ Customizable scan intervals ⏳  
 
-## Requirements
-- Python 3.x
-- `requests` module (for sending alerts to Discord)
+## 🔧 Requirements
+- **Python 3.x** 🐍
+- `requests` module (for Discord alerts) 🌐
 
-## Installation
-1. Clone the repository or download the script:
+## 📥 Installation
+1️⃣ Clone the repo:
    ```bash
-   git clone https://github.com/yourrepo/arp-spoof-detector.git
-   cd arp-spoof-detector
+   git clone https://github.com/c1ph3r1337/spoofshield.git
+   cd spoofshield
    ```
-2. Install the required dependencies:
+2️⃣ Install dependencies:
    ```bash
    pip install requests
    ```
 
-## Configuration
-Modify the script to set up your Discord webhook and network settings:
-- **`WEBHOOK_URL`**: Replace with your Discord webhook URL.
-- **`SUBNET_PREFIX`**: Set the subnet to monitor (default: `192.168.1.`).
-- **`GATEWAY_IP`**: Set your router's IP address (default: `192.168.1.1`).
-- **`SCAN_INTERVAL`**: Adjust the scanning frequency (default: `60` seconds).
+## ⚙️ Configuration
+Edit the script to set up your **Discord webhook & network settings**:
 
-Example configuration in the script:
+🔹 **WEBHOOK_URL** → Replace with your **Discord Webhook URL** 🎯  
+🔹 **SUBNET_PREFIX** → Set the subnet to **monitor** (default: `192.168.1.`) 🌍  
+🔹 **GATEWAY_IP** → Set your **router's IP address** (default: `192.168.1.1`) 🏠  
+🔹 **SCAN_INTERVAL** → Adjust scanning frequency (default: `60` seconds) ⏰  
+
+Example config inside `spoofshield.py`:
 ```python
 WEBHOOK_URL = "your_discord_webhook_url"
 SUBNET_PREFIX = "192.168.1."
@@ -39,21 +41,21 @@ GATEWAY_IP = "192.168.1.1"
 SCAN_INTERVAL = 60  # Seconds between scans
 ```
 
-## Usage
-Run the script using:
+## 🚀 Usage
+Run **SpoofShield** like a pro:
 ```bash
-python arp_spoof_detector.py
+python spoofshield.py
 ```
-The tool will continuously monitor the ARP table and send notifications to Discord when suspicious activity is detected.
+It will **continuously monitor** your ARP table and send 🔔 **alerts** if it detects spoofing! 👀
 
-## How It Works
-1. Retrieves the ARP table using `arp -a`.
-2. Parses the ARP table to extract IP-MAC pairs.
-3. Filters the results based on the subnet.
-4. Detects if multiple IPs are associated with the same MAC as the gateway.
-5. Sends alerts to Discord if spoofing is detected.
+## 🕵️‍♂️ How It Works
+1️⃣ Fetches the **ARP table** using `arp -a` 🗂️  
+2️⃣ Parses the ARP table for **IP-MAC** pairs 📊  
+3️⃣ Filters results for your **subnet** 🌍  
+4️⃣ Detects if multiple **IP addresses** share the same MAC as the **gateway** 🚨  
+5️⃣ Sends an **alert to Discord** if spoofing is detected! ⚠️  
 
-## Example Discord Alert
+## 📢 Example Discord Alert
 ```
 📋 **ARP Table (192.168.1.0/24):**
 ```plaintext
@@ -61,14 +63,15 @@ The tool will continuously monitor the ARP table and send notifications to Disco
 192.168.1.5    58:11:22:e0:67:4f    dynamic
 ```
 
-🔔 **ALERT: Possible ARP spoofing detected!** Another IP shares the same MAC as the gateway.
+🔔 **ALERT: Possible ARP spoofing detected!** 🚨  
+**Another IP shares the same MAC as the gateway!**
 ```
 
-## License
-This project is open-source and available under the [MIT License](LICENSE).
+## 📜 License
+🚀 **SpoofShield** is open-source and available under the **MIT License**. 
 
-## Contribution
-Feel free to contribute by submitting pull requests or reporting issues!
+## 💻 Contribution
+Pull requests are **welcome**! Feel free to submit **issues & PRs** to improve **SpoofShield**! 🔥
 
-## Disclaimer
-This tool is for educational and security monitoring purposes only. Use it responsibly and ensure you have permission to monitor the network you are scanning.
+## ⚠️ Disclaimer
+🛑 **For educational & security purposes only!** Ensure you have **permission** to scan the network you're monitoring! 🚫
