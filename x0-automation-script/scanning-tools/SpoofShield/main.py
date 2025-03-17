@@ -3,6 +3,19 @@ import time
 import re
 import requests
 
+
+def print_banner():
+    banner = r"""
+  ___|                     _| ___|  |    _)      |     | 
+\___ \  __ \   _ \   _ \  | \___ \  __ \  |  _ \ |  _` | 
+      | |   | (   | (   | __|     | | | | |  __/ | (   | 
+_____/  .__/ \___/ \___/ _| _____/ _| |_|_|\___|_|\__,_| 
+       _|                                                
+    """
+    print(banner)
+    print("🚨 SpoofShield - ARP Spoofing Detection Tool 🔥")
+    print("Made by c1ph3r1337 😎🔥\n")
+
 # Configuration
 WEBHOOK_URL = "webhook_url"  # Replace with your actual webhook URL
 SUBNET_PREFIX = "192.168.1."
