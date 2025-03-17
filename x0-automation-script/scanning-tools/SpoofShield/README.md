@@ -25,7 +25,7 @@ _____/  .__/ \___/ \___/ _| _____/ _| |_|_|\___|_|\__,_|
 ## 📥 Installation
 1️⃣ Clone the repo:
    ```bash
-   git clone https://github.com/c1ph3r1337/spoofshield.git](https://github.com/c1ph3r-1337/100-days-of-cybersecurity/tree/main/x0-automation-script/scanning-tools/SpoofShield
+   git clone https://github.com/c1ph3r-1337/100-days-of-cybersecurity/tree/main/x0-automation-script/scanning-tools/SpoofShield
    cd spoofshield
    ```
 2️⃣ Install dependencies:
