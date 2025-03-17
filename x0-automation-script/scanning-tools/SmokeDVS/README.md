@@ -24,13 +24,13 @@ The Domain Vulnerability Scanner is a portable Python-based tool designed to ide
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/smokeshard/
-    cd domain-vulnerability-scanner
+    git clone https://github.com/smokeshard/100-days-of-cybersecurity/
+    cd 100-days-of-cybersecurity/x0-automation-script/scanning-tools/SmokeDVS
     ```
 
 2. Run the scanner:
     ```bash
-    python domain_scanner.py
+    python SmokeDVS.py
     ```
 
 ## Usage
