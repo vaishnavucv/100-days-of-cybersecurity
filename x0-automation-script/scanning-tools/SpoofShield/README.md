@@ -11,6 +11,7 @@ _____/  .__/ \___/ \___/ _| _____/ _| |_|_|\___|_|\__,_|
 ## 🛡️ Overview
 **SpoofShield** is a powerful ARP spoofing detection tool that keeps your network safe from MITM (Man-in-the-Middle) attacks. It scans your network, detects ARP anomalies, and alerts you on **Discord** when it finds something shady! 🕵️‍♂️
 
+
 ## ⚡ Features
 ✅ Real-time ARP table scanning 🔄  
 ✅ Detects ARP spoofing attacks 🕶️  
