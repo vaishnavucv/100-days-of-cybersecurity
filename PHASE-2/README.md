@@ -4,13 +4,13 @@
 
 | **Week** | **Day** | **Topic**                             | **Objective**                                        | **Resources Link** |
 |----------|---------|---------------------------------------|-----------------------------------------------------|--------------------|
-|          | Day 21    | Vulnerability Scanning Basics         | Use tools like Nessus and OpenVAS.                 | [Resources]()      |
-|          | Day 22    | Identifying Vulnerabilities in Applications | Analyze web apps and APIs for security gaps.        | [Resources]()      |
-| Week-3   | Day 23    | Automating Scans                      | Write scripts to automate vulnerability scans.     | [Resources]()      |
-|          | Day 24    | Web Server Scanning                   | Learn Nikto and Wappalyzer.                        | [Resources]()      |
-|          | Day 25    | Patch Management                      | Learn about patching and update management.        | [Resources]()      |
-|          | Day 26    | Build a Custom Vulnerability Scanner  | Create a Python script for basic vulnerability detection. | [Resources]() |
-|          | Day 27    | Review and Practice                   | Test and refine scanning tools.                    | [Resources]()      |
+|          | Day 15    | Vulnerability Scanning Basics         | Use tools like Nessus and OpenVAS.                 | [Resources]()      |
+|          | Day 16    | Identifying Vulnerabilities in Applications | Analyze web apps and APIs for security gaps.        | [Resources]()      |
+| Week-3   | Day 17    | Automating Scans                      | Write scripts to automate vulnerability scans.     | [Resources]()      |
+|          | Day 18    | Web Server Scanning                   | Learn Nikto and Wappalyzer.                        | [Resources]()      |
+|          | Day 19    | Patch Management                      | Learn about patching and update management.        | [Resources]()      |
+|          | Day 20    | Build a Custom Vulnerability Scanner  | Create a Python script for basic vulnerability detection. | [Resources]() |
+|          | Day 21    | Review and Practice                   | Test and refine scanning tools.                    | [Resources]()      |
 
 ---
 
