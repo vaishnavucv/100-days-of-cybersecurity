@@ -1,29 +1,29 @@
-# Red Teaming and Advanced Tools Development (Days 81–100)
+# Red Teaming and Advanced Tools Development (Days 50–64)
 
-## Week 8: Red Teaming Basics (Days 81–87)
+## Week 8: Red Teaming Basics (Days 50–57)
 
 |**Week** | **Day** | **Topic**                     | **Objective**                                    | **Resources Link** |
 |---------|---------|--------------------------------|------------------------------------------------|---------------------|
-|         | Day 81  | Red Team vs Blue Team          | Learn the difference and roles in security operations. | [Resources📄](#)   |
-|         | Day 82  | Active Directory Exploitation  | Attack Active Directory environments.          | [Resources📄](#)   |
-|         | Day 83  | Bypassing Firewalls and AV     | Learn methods to bypass security mechanisms.   | [Resources📄](#)   |
-|  week 8 | Day 84  | Developing Custom Payloads     | Create payloads using MSFvenom and Python.     | [Resources📄](#)   |
-|         | Day 85  | Data Exfiltration Techniques   | Learn methods for extracting sensitive data.   | [Resources📄](#)   |
-|         | Day 86  | Red Team Tool Development      | Build a Python tool to assist in red teaming.  | [Resources📄](#)   |
-|         | Day 87  | Review and Practice            | Test and refine red team techniques.           | [Resources📄](#)   |
+|         | Day 51  | Red Team vs Blue Team          | Learn the difference and roles in security operations. | [Resources📄](#)   |
+|         | Day 52  | Active Directory Exploitation  | Attack Active Directory environments.          | [Resources📄](#)   |
+|         | Day 53  | Bypassing Firewalls and AV     | Learn methods to bypass security mechanisms.   | [Resources📄](#)   |
+|  week 8 | Day 54  | Developing Custom Payloads     | Create payloads using MSFvenom and Python.     | [Resources📄](#)   |
+|         | Day 55  | Data Exfiltration Techniques   | Learn methods for extracting sensitive data.   | [Resources📄](#)   |
+|         | Day 56  | Red Team Tool Development      | Build a Python tool to assist in red teaming.  | [Resources📄](#)   |
+|         | Day 57  | Review and Practice            | Test and refine red team techniques.           | [Resources📄](#)   |
 
 ---
-# Week 9: Blue Team and Defensive Techniques (Days 88–94)
+# Week 9: Blue Team and Defensive Techniques (Days 58–64)
 
 |**week** | **Day** | **Topic**                       | **Objective**                                     | **Resources Link** |
 |---------|---------|----------------------------------|-------------------------------------------------|---------------------|
-|         | Day 88  | Introduction to Incident Response | Learn steps to respond to breaches.              | [Resources📄](#)   |
-|         | Day 89  | Log Analysis                     | Use tools like Splunk for log monitoring.         | [Resources📄](#)   |
-|         | Day 90  | Threat Hunting Basics            | Learn proactive threat detection methods.         | [Resources📄](#)   |
-| week 9  | Day 91  | Building a Threat Detection Tool  | Develop a Python-based alert system.              | [Resources📄](#)   |
-|         | Day 92  | SIEM (Security Information and Event Management) | Understand and configure a basic SIEM setup. | [Resources📄](#)   |
-|         | Day 93  | Defensive Coding                 | Write secure code to prevent common vulnerabilities. | [Resources📄](#)   |
-|         | Day 94  | Review and Practice              | Consolidate blue team defensive skills.           | [Resources📄](#)   |
+|         | Day 58  | Introduction to Incident Response | Learn steps to respond to breaches.              | [Resources📄](#)   |
+|         | Day 59  | Log Analysis                     | Use tools like Splunk for log monitoring.         | [Resources📄](#)   |
+|         | Day 60  | Threat Hunting Basics            | Learn proactive threat detection methods.         | [Resources📄](#)   |
+| week 9  | Day 61  | Building a Threat Detection Tool  | Develop a Python-based alert system.              | [Resources📄](#)   |
+|         | Day 62  | SIEM (Security Information and Event Management) | Understand and configure a basic SIEM setup. | [Resources📄](#)   |
+|         | Day 63  | Defensive Coding                 | Write secure code to prevent common vulnerabilities. | [Resources📄](#)   |
+|         | Day 64  | Review and Practice              | Consolidate blue team defensive skills.           | [Resources📄](#)   |
 
 ---
 # Week 10: Final Challenges and Projects (Days 95–100)
