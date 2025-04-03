@@ -1,4 +1,4 @@
-## System Vulnerabilities and Exploitation (Days 15–50)
+## System Vulnerabilities and Exploitation (Days 15–35)
 
 ### Week 3: Vulnerability Scanning (Days 15–21)
 
