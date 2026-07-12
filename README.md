@@ -3,7 +3,7 @@
 <div align="center">
 
 [![GitHub stars](https://img.shields.io/github/stars/vaishnavucv/100-days-of-cybersecurity?style=social)](https://github.com/vaishnavucv/100-days-of-cybersecurity)
-[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/bFkdWjgCdF)
+[![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/E4Zfc9NQJJ)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 **A comprehensive, structured learning roadmap to master cybersecurity and ethical hacking in 100 days**
@@ -120,7 +120,7 @@ Become a skilled red and blue team operator with capstone projects.
    - Begin with [PHASE-1/README.md](PHASE-1/README.md)
    - Complete one day at a time
    - Document your learning in your progress folder
-   - Join our [Discord community](#-community) for support
+   - Join our [Discord community](https://discord.gg/E4Zfc9NQJJ) for support
 
 ---
 
@@ -194,7 +194,7 @@ By the end of 100 days, you will be able to:
 ### Join Our Community
 
 **Discord** (Main Support Hub)
-- [![Discord](https://img.shields.io/badge/Join%20Discord-%235865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/bFkdWjgCdF)
+- [![Discord](https://img.shields.io/badge/Join%20Discord-%235865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/E4Zfc9NQJJ)
 - Get real-time help from instructors and peers
 - Discuss challenges and share solutions
 - Network with cybersecurity professionals
@@ -387,7 +387,7 @@ Begin your cybersecurity journey today:
 2. **Star** to show support
 3. **Open** [PHASE-1/README.md](PHASE-1/README.md)
 4. **Commit** to 100 days of learning
-5. **Join** our [Discord community](https://discord.gg/bFkdWjgCdF)
+5. **Join** our [Discord community](https://discord.gg/E4Zfc9NQJJ)
 
 **Your cybersecurity career starts here. Let's go! 🎯**
 
