@@ -35,7 +35,7 @@ VirtualBox is an open-source virtualization tool that allows you to run multiple
 > Kali Linux is a popular Linux distribution used by cybersecurity professionals. However, it is not recommended for beginners. For working professionals, you can download the prebuilt VM:
 
 - **Download:**  
-  [Kali Linux for VirtualBox](https://cdimage.kali.org/kali-2024.4/kali-linux-2024.4-virtualbox-amd64.7z)
+  [Kali Linux for VirtualBox](https://cdimage.kali.org/kali-2025.4/kali-linux-2025.4-virtualbox-amd64.7z)
 
 - **Steps to Set Up Kali Linux VM:**
   1. Download and extract the VM file using software like [7-Zip](https://www.7-zip.org/).
